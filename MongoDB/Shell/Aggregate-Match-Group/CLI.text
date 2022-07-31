@@ -1,0 +1,26 @@
+#Query-Documents-From-Collection-$group-by-last-name-and-count
+#Note:- $sum ignores non-numeric values, hence {$sum:"$last_name"} will not work, so we do $sum:1, since we are already grouping by last_name, so it works like count
+#Note:- $sum is more useful for numeric values, like amounts and dates
+db.people.aggregate([{$match:{"last_name":"Pham"}},{$group:{_id:"$last_name", "total":{$sum:1}}}])
+
+#Query-Documents-From-Collection-$group-by-Array-Elements-with-$unwind-example-#1
+#Note:  $unwind allows is to split an array of documents into individual accounts for aggregation
+db.grades.aggregate([{$match:{$and:[{"student_id":0},{"class_id":339}]}},{$unwind:"$scores"},{$group:{"_id":"$scores.type", "Total-Sum-by-Type":{$sum:"$scores.score"}}}])
+
+#Query-Documents-From-Collection-$group-by-Array-Elements-with-$unwind-example-#2
+db.restaurants.aggregate([{$match:{$and:[{"address.building":"2780"},{"address.zipcode":"11224"},{"cuisine":"American"}]}},{$unwind:"$grades"},{$group:{"_id":"$grades.grade", "Total-Per-Grade":{$sum:"$grades.score"}}}])
+
+#Query-Documents-From-Collection-$count-documents
+db.restaurants.aggregate([{$count:"total_documents"}])
+
+#Query-Documents-From-Collection-$match-$project-$sort-by-value
+#Note - For Sort to work, you must project that field
+#Ascending
+db.zips.aggregate([{$match:{$and:[{"state":"AL"},{"city":"BIRMINGHAM"}]}},{$project:{"_id":0,"state":1, "city":1, "pop":1}},{$sort:{"pop":1}}])
+
+#Descending
+db.zips.aggregate([{$match:{$and:[{"state":"AL"},{"city":"BIRMINGHAM"}]}},{$project:{"_id":0,"state":1, "city":1, "pop":1}},{$sort:{"pop":-1}}])
+
+
+#Query-Documents-From-Collection-$sort-$skip-top-5
+db.zips.aggregate([{$match:{$and:[{"state":"AL"},{"city":"BIRMINGHAM"}]}},{$project:{"_id":0,"state":1, "city":1, "pop":1}},{$sort:{"pop":1}},{$skip:5}])
