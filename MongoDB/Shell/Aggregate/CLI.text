@@ -1,0 +1,47 @@
+#Query-Documents-From-Collection-With-Aggregate
+#Note- This has will have the same behavior as find, 20 documents will be displayed
+db.people.aggregate()
+
+#Query-Documents-From-Collection-With-Limit-on-the-#-of-Documents-to-be-displayed
+db.people.aggregate({$limit:5})
+db.people.aggregate([{$limit:5}])
+
+#Query-Documents-From-Collection-Pretty-Printed
+db.people.aggregate({$limit:5}).pretty()
+
+#Query-Documents-From-Collection-With-Condition
+#This is equivalent to $eq in find, $eq cannot be use with $match in aggregate
+db.products.aggregate([{$match:{"type":"Software"}}]).pretty()
+
+#Query-Documents-From-Collection-Emulate-FindOne
+db.people.aggregate({$limit:1}).pretty()
+
+#Query-Documents-From-Collection-using-$in-operator
+#Note:- Format of using $in is same in both aggregate and find, i.e : Field name --> in --> [values]
+db.people.aggregate([{$match:{employer:{$in:["Terry and Sons"]}}},{$limit:4}]).pretty()
+
+#Query-Documents-From-Collection-using-$nin-operator
+#Note:- Format of using $nin is same in both aggregate and find, i.e : Field name --> nin --> [values]
+db.people.aggregate([{$match:{employer:{$nin:["Terry and Sons"]}}},{$limit:4}]).pretty()
+
+#Query-Documents-From-Collection-using-$and-operator
+db.people.aggregate({$match:{$and:[{"last_name":"Pham"},{"job":"Counselling psychologist"},{"first_name":"Yvonne"}]}}).pretty()
+
+#Query-Documents-From-Collection-using-$lte-operator
+db.people.aggregate({$match:{$and:[{"job":"Counselling psychologist"}, {"birthday":{$lte:ISODate("2015-06-11T03:08:29Z")}}]}},{$limit:1}).pretty()
+
+#Query-Documents-From-Collection-using-$gte-operator
+db.people.aggregate({$match:{$and:[{"job":"Counselling psychologist"}, {"birthday":{$gte:ISODate("2015-06-11T03:08:29Z")}}]}},{$limit:1}).pretty()
+
+#Query-Documents-From-Collection-using-$or-operator
+db.people.aggregate({$match:{$or:[{"address.zip":"47201"},{"employer":"Terry and Sons"}]}},{$limit:2}).pretty()
+
+#Query-Documents-From-Collection-using-$regex-starting-with-pattern
+db.zips.aggregate([{$match:{$and:[{"city":{$regex:"^alp", $options:"i"}}]}}])
+
+#Query-Documents-From-Collection-using-$regex-ending-with-pattern
+db.zips.aggregate([{$match:{$and:[{"city":{$regex:"etta$", $options:"i"}}]}}])
+
+#Query-Documents-From-Collection-using-$regex-containing-pattern
+db.zips.aggregate([{$match:{$and:[{"city":{$regex:"ton", $options:"i"}}]}}])
+
