@@ -1,0 +1,6 @@
+#Query-Documents-From-Collection-Selective-Printing-with-$Project-$and
+db.people.aggregate({$match:{$and:[{"first_name":"Yvonne"},{"last_name":"Pham"},{"address.zip":"47201"}]}},{$project:{"_id":0, "first_name":1, "last_name":1}},{$limit:1}).pretty()
+
+#Query-Documents-From-Collection-Selective-Printing-with-$Project-$or
+db.people.aggregate({$match:{$or:[{"employer":"Terry and Sons"},{"address.zip":"47201"}]}},{$project:{"_id":0, "first_name":1, "last_name":1, "employer":1, "birthday":1, "address.zip":1}},{$limit:10})
+
