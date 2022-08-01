@@ -1,0 +1,3 @@
+#Distinct job in Collection - People. This emulates - Select DISTINCT(job) from People
+db.people.aggregate([{$group:{_id:"$job"}}])
+
