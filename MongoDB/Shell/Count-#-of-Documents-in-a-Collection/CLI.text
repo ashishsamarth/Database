@@ -1,0 +1,5 @@
+Method#1 - db.people.find({}).count()
+Method#2 - db.people.stats().count
+Method#3 - db.people.count()
+Method#4 - db.people.count({_id:{$exists: true}})
+Method#5 - db.people.find({"_id":{$exists: true}}).count()
