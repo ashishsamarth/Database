@@ -1,0 +1,3 @@
+#By default the value is set to 20, however its configurable. The following when executed on mongo shell, limits the # of documents displayed from 20 to 1
+
+DBQuery.shellBatchSize = 1;
