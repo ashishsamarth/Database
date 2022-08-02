@@ -1,0 +1,34 @@
+#Query-Documents-Having-Array-Of-Documents-Projection-Selective-Printing
+#Explaination - If you want to print the 1st element of every document in the array, use the field of first element
+>db.grades.find({},{"_id":0,"scores.type":1}).limit(2)
+{ "scores" : [ { "type" : "exam" }, { "type" : "quiz" }, { "type" : "homework" }, { "type" : "homework" } ] }
+{ "scores" : [ { "type" : "exam" }, { "type" : "quiz" }, { "type" : "homework" }, { "type" : "homework" } ] }
+
+#Explaination - If you want to print the 2nd element of every document in the array, use the field of Second element
+> db.grades.find({},{"_id":0,"scores.score":1}).limit(2)
+{ "scores" : [ { "score" : 78.40446309504266 }, { "score" : 73.36224783231339 }, { "score" : 46.980982486720535 }, { "score" : 76.67556138656222 } ] }
+{ "scores" : [ { "score" : 91.97520018439039 }, { "score" : 95.80410375967175 }, { "score" : 89.62485475572984 }, { "score" : 51.621532832724846 } ] }
+
+#Explaination - Reversing the printing sequence in projection does not have any affect, the original structure will be printed
+> db.grades.find({},{"_id":0,"scores.type":1, "scores.score":1}).limit(2)
+{ "scores" : [ { "type" : "exam", "score" : 78.40446309504266 }, { "type" : "quiz", "score" : 73.36224783231339 }, { "type" : "homework", "score" : 46.980982486720535 }, { "type" : "homework", "score" : 76.67556138656222 } ] }
+{ "scores" : [ { "type" : "exam", "score" : 91.97520018439039 }, { "type" : "quiz", "score" : 95.80410375967175 }, { "type" : "homework", "score" : 89.62485475572984 }, { "type" : "homework", "score" : 51.621532832724846 } ] }
+
+> db.grades.find({},{"_id":0,"scores.score":1, "scores.type":1}).limit(2)
+{ "scores" : [ { "type" : "exam", "score" : 78.40446309504266 }, { "type" : "quiz", "score" : 73.36224783231339 }, { "type" : "homework", "score" : 46.980982486720535 }, { "type" : "homework", "score" : 76.67556138656222 } ] }
+{ "scores" : [ { "type" : "exam", "score" : 91.97520018439039 }, { "type" : "quiz", "score" : 95.80410375967175 }, { "type" : "homework", "score" : 89.62485475572984 }, { "type" : "homework", "score" : 51.621532832724846 } ] }
+------------------------------------------------------------------------------------------------------------------
+#Query-Documents-Having-Array-Of-Documents-Match-a-document-using-$elemMatch-in-a-Document
+#Explaination - Match 1 element (document) in the array
+db.grades.find({"scores":{$elemMatch:{"type":"exam", "score":{$gte:99.998}}}},{"_id":0,"scores":1}).pretty()
+
+#Explaination - Match 2 elements (documents) in the array with $and
+db.grades.find({$and:[{"scores":{$elemMatch:{"type":"exam", "score":{$gte:99.998}}}},{"scores":{$elemMatch:{"type":"quiz", "score":{$gte:25}}}}]},{"_id":0,"scores":1})
+------------------------------------------------------------------------------------------------------------------
+#Query-Documents-Having-Array-Of-Documents-Project-specific-Element-of-Array-using-$slice
+#Explaination - Project only the last element of the scores array
+db.grades.find({},{"_id":0,"student_id":0,"scores":{$slice:-1}, "class_id":0}).limit(5)
+
+#Explaination - Project the last element and last but one element of the scores array
+db.grades.find({},{"_id":0,"student_id":0,"scores":{$slice:-2}, "class_id":0}).limit(5)
+------------------------------------------------------------------------------------------------------------------
