@@ -1,0 +1,29 @@
+I am using grades.json since this collection has the array of documents.
+
+In the following sample, scores is an array of documents, with 4 documents, starting from index position 0 to 3
+
+> db.grades.findOne()
+{
+        "_id" : ObjectId("56d5f7eb604eb380b0d8d8ce"),
+        "student_id" : 0,
+        "scores" : [
+                {
+                        "type" : "exam",
+                        "score" : 78.40446309504266
+                },
+                {
+                        "type" : "quiz",
+                        "score" : 73.36224783231339
+                },
+                {
+                        "type" : "homework",
+                        "score" : 46.980982486720535
+                },
+                {
+                        "type" : "homework",
+                        "score" : 76.67556138656222
+                }
+        ],
+        "class_id" : 339
+}
+>
