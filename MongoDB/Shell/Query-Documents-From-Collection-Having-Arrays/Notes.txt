@@ -1,0 +1,12 @@
+I will be using the accounts collection for this
+
+Sample Dataset
+
+> db.accounts.find({})
+{ "_id" : ObjectId("5ca4bbc7a2dd94ee5816238c"), "account_id" : 371138, "limit" : 9000, "products" : [ "Derivatives", "InvestmentStock" ] }
+{ "_id" : ObjectId("5ca4bbc7a2dd94ee5816238d"), "account_id" : 557378, "limit" : 10000, "products" : [ "InvestmentStock", "Commodity", "Brokerage", "CurrencyService" ] }
+{ "_id" : ObjectId("5ca4bbc7a2dd94ee5816238e"), "account_id" : 198100, "limit" : 10000, "products" : [ "Derivatives", "CurrencyService", "InvestmentStock" ] }
+{ "_id" : ObjectId("5ca4bbc7a2dd94ee5816238f"), "account_id" : 674364, "limit" : 10000, "products" : [ "InvestmentStock" ] }
+{ "_id" : ObjectId("5ca4bbc7a2dd94ee58162390"), "account_id" : 278603, "limit" : 10000, "products" : [ "Commodity", "InvestmentStock" ] }
+Type "it" for more
+>
