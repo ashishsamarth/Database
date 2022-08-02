@@ -1,0 +1,25 @@
+Step#1 - Start your IntelliJ IDEA
+Step#2 - Navigate to File --> Settings --> Plugins
+Step#3 - Click on Marketplace tab and then search for "Mongo Plugin"
+Step#4 - If you are unable to find the plugin, you might have to do either of the two
+    a. Configure your repository
+    b. Following offline (zip file method) installation approach
+Step#5 - I was not able to find it in the Market place, hence ended up following #4.b
+Step#6 - Go to following link and download the zip file (based on whatever version you want to install)
+            https://plugins.jetbrains.com/plugin/7141-mongo-plugin/versions
+Step#7 - Once the zip file is downloaded, navigate to File --> Settings --> Plugins
+Step#8 - Click on the Gear icon on the page and you will see an option of "Install Plugin from disk"
+Step#9 - Click on that option, navigate to the downloaded location of the zip file and select the file.
+Step#10 - Once the plugin is installed, restart your IDE for the mongo plug in to take effect.
+Step#11 - After the IDE starts, you will see "Mongo Explorer" on the right side of the IDE.
+Step#12 - Click on it, you will see a "+" sign, use it to connect to your database (mine is a local, no-auth set up)
+Step#13 - Once the connection is successful, you will all the installed databases.
+Step#14 - Up until this stage, you will see the Mongo Shell is disabled in the IDE,we need to do few more steps.
+Step#15 - On the same Mongo Explorer view, you will see a "wrench", click on it
+Step#16 - It will open a window to configure "Path to Mongo Shell"
+Step#17 - Browse the path to select "mongo.exe" , Click on "Test" --> "Apply" --> "Ok"
+Step#18 - Configure is completed, now simply click on any of the database and you will see the mongo shell option.
+Step#19 - Once the option is clicked, it will open the mongo shell with in the IDE, just like terminal
+
+Special Note - The Mongo shell needs to be configured for every project. Their seems to be an option to have it configured
+at the Mongo DB server level, but i haven't had an opportunity to explore that
