@@ -1,0 +1,57 @@
+#Query-Documents-From-Collection-Having-1-element-in-Array-To-match-the-array
+db.accounts.find({"products":["InvestmentStock"]})
+
+#Query-Documents-From-Collection-Having-2-elements-in-Array-To-match-the-array
+#Special Note:- Sequence or Order of Elements is important in the array, following MQLs look similar, but provides different results
+db.accounts.find({"products":["InvestmentStock","Commodity"]})
+db.accounts.find({"products":["Commodity","InvestmentStock"]})
+
+#Query-Documents-From-Collection-Ignoring-the-Order-of-Elements-in-Array-$all-operator
+#Special Note:- Using $all in the MQL will search for existence of following elements irrespective of their order in the array
+db.accounts.find({"products":{$all:["Commodity","InvestmentStock"]}})
+
+#Query-Documents-From-Collection-to-search-for-one-element-in-the-Array
+db.accounts.find({"products":"Commodity"})
+
+#Query-Documents-From-Collection-to-Filter-based-on-exact-size-of-Array-$size-operator-Method#1
+db.accounts.find({"products":{$size:3}})
+db.accounts.find({"products":{$size:2}})
+
+#Query-Documents-From-Collection-to-Filter-based-on-size-of-array-using-$size-operator-Method#2
+#Explaination - NOT (array-size - 0,1,2,3) :Output will filter documents where array size is at least 4
+db.accounts.find({$nor:[{"products":{$size:0}},{"products":{$size:1}},{"products":{$size:2}},{"products":{$size:3}}]})
+
+#Query-Documents-From-Collection-to-Filter-based-on-size-of-array-using-$find-operator-Method#3
+#Explaination - Filter the documents where array has at least 1 element in the array
+db.accounts.find({"products.0":{$exists: true}})
+#Explaination - Filter the documents where array has at least 4 elements in the array
+db.accounts.find({"products.4":{$exists: true}})
+
+
+#Query-Documents-From-Collection-to-Filter-based-on-size-of-array-using-numeric-array-index
+#Looks for array size of at least 1 element in the array
+db.accounts.find({"products.0":{$exists: true}})
+#Looks for array size of at least 2 element in the array
+db.accounts.find({"products.1":{$exists: true}})
+#Looks for array size of at least 3 element in the array
+db.accounts.find({"products.2":{$exists: true}})
+#Looks for array size of at least 4 element in the array
+db.accounts.find({"products.3":{$exists: true}})
+#Looks for array size of at least 5 element in the array
+db.accounts.find({"products.4":{$exists: true}})
+
+#Query-Documents-From-Collection-to-identify-if-array-exists-for-a-document-$exists or $not:$exists
+#Explaination - not-exists = False, eventually leads to exists = True
+db.accounts.find({"products":{$not:{$exists: false}}})
+#Explaination - not-exists = true, eventually leads to exists = False, hence the MQL will not return any documents as array is present in all the documents
+db.accounts.find({"products":{$not:{$exists: true}}})
+#Explaination - exists=false, this MQL will not return any documents, since the array is present in all documents
+db.accounts.find({"products":{$exists: false}})
+#Explaination - exists=true, this MQL will return documents, since the array is present in all documents of this collection
+db.accounts.find({"products":{$exists: true}})
+
+#Query-Documents-From-Collection-to-identify-if-elements-exists-in-array-exists-for-a-document-aggregate-match-approach
+#Explaination - Using aggregate - assign the size of the array to new field "array_size_of_product", then use match to find documents where the array size is 0
+#Special Note - This approach needs the array to be present, it can be a zero element array as well
+db.accounts.aggregate([{$project:{"_id":0,"products":1, "array_size_of_product":{$size: "$products"}}},{$match:{"array_size_of_product":{$eq:0}}}])
+
