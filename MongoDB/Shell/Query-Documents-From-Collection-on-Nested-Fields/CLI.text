@@ -1,0 +1,5 @@
+#Query-Documents-From-Collection-on-Nested-Fields-#1-One-Level - Based on zip code (inside address object)
+db.people.find({"address.zip":"52277"}).pretty()
+
+#Query-Documents-From-Collection-on-Nested-Fields-#2-Two-Levels - Based on Number of Reviews (inside tomatoes object)
+db.movies.find({"tomatoes.viewer.numReviews":184}).pretty().limit(1)
