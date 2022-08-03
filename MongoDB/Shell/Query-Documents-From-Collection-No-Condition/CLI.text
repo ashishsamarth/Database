@@ -1,0 +1,3 @@
+# This will usually print 20 documents from the collection
+# In my case i have DBQuery.shellBatchSize = 5, hence the output has only 5 documents
+db.products.find({})
