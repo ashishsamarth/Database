@@ -1,0 +1,4 @@
+#Query-Documents-From-Collection-on-Nested-Documents-equality-condition
+#Special Note:- When querying nested documents for equality condition, if you miss out on any of the nested field-value pairs in your query, the result will be null
+db.tvshows.find({"externals":{"tvrage":25988,"thetvdb":264492,"imdb":"tt1553656"}}).pretty()
+
