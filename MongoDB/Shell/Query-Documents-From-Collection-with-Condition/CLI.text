@@ -1,0 +1,66 @@
+#Query-Documents-From-Collection-with-Condition-#1
+db.products.find({"type":"Software"}).pretty()
+
+#Query-Documents-From-Collection-with-Condition-#2 - $eq operator
+db.products.find({"type":{$eq:"Software"}}).pretty()
+
+#Query-Documents-From-Collection-with-Condition-#3 - $in operator
+db.products.find({"type":{$in:["Software","Music"]}}).pretty()
+
+#Query-Documents-From-Collection-with-Condition-#4 - $nin operator
+db.products.find({"type":{$nin:["Software","Music"]}}).pretty()
+
+#Query-Documents-From-Collection-with-Condition-#5 - $lt operator
+db.products.find({"regularPrice":{$lt:(10)}}).pretty()
+
+#Query-Documents-From-Collection-with-Condition-#6 - $lte operator
+db.products.find({"regularPrice":{$lte:(8.99)}}).pretty()
+
+#Query-Documents-From-Collection-with-Condition-#7 - $ne operator
+db.products.find({"regularPrice":{$ne:(8.99)}}).pretty()
+
+#Query-Documents-From-Collection-with-Condition-#8 - $gt operator
+db.products.find({"regularPrice":{$gt:(14.99)}}).pretty()
+
+#Query-Documents-From-Collection-with-Condition-#9 - $gte operator
+db.products.find({"regularPrice":{$gte:(14.99)}}).pretty()
+
+#Query-Documents-From-Collection-with-Condition-#10 - $and operator
+db.products.find({$and:[{"type":"Movie"},{"regularPrice":{$lte:39.99}}]}).pretty()
+
+#Query-Documents-From-Collection-with-Condition-#11 - Another way of writing $and operator
+db.products.find({"type":"Movie","regularPrice":{$lte:39.99}}).pretty()
+
+#Query-Documents-From-Collection-with-Condition-#12 - $or operator
+db.products.find({$or:[{"type":"Software"},{"regularPrice":124.99}]}).pretty()
+
+#Query-Documents-From-Collection-with-Condition-#13 - $and with $or operator
+db.products.find({$and:[{"shippingWeight":"0.01"}, {$or:[{"type":"Software"},{"regularPrice":124.99}]}]}).pretty()
+
+#Query-Documents-From-Collection-with-Condition-#14 - Another way of writing $and with $or operator
+db.products.find({"shippingWeight":"0.01", $or:[{"type":"Software"},{"regularPrice":124.99}]}).pretty()
+
+#Query-Documents-From-Collection-with-Condition-#15 - $nor operator
+db.products.find({$nor:[{"type":"Software"},{"regularPrice":124.99}]}).pretty()
+
+#Query-Documents-From-Collection-with-Condition-#16 - $not operator
+db.products.find({"shippingWeight":{$not:{$eq:"0.25"}}}).pretty()
+
+#Query-Documents-From-Collection-with-Condition-#17-Starting-with-Value
+db.zips.find({"city":/^ALP/})
+
+#Query-Documents-From-Collection-with-Condition-#18-Ending-with-Value
+db.zips.find({"city":/ETTA$/})
+
+#Query-Documents-From-Collection-with-Condition-#19-Value-anywhere-in-text
+db.zips.find({"city":/TON/})
+
+#Query-Documents-From-Collection-With-Condition-#20-$regex-IgnoreCase
+db.zips.find({"city":{$regex:"^alp", $options:"i"}})
+
+#Query-Documents-From-Collections-With-Condition-#21-$regex-ExactMatch
+db.zips.find({"city":{$regex:"^alpine$", $options:"i"}}).limit(3)
+
+#Query-Documents-From-Collection-With-Condition-#22-special-case-Specific-Characters-Ignore-Case
+#Note:- Characters preceded by (?-i) are NOT ignoring case, Characters preceded by (?i) ARE ignoring case
+db.inspections.find({"result":{$regex:"(?-i)No (?-i)V(?i)iolation"}}).limit(3).forEach(printjson)
