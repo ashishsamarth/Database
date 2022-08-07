@@ -44,3 +44,14 @@ C. A field is a unique identified for a specific datapoint.
 Answer: B and C
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+What is Atlas?
+How is MongoDB Atlas related to MongoDB the database?
+
+A. They both are MongoDB products
+B. Atlas is a MongoDB service that can work with any Database, but in this course it will used with MongoDB
+C. MongoDB Database has the same functionality as Atlast, but without the friendly user interface.
+D. Atlas has many tools and services within it that are built specifically for the MongoDB Database.
+
+Answer: A and D
+
+--------------------------------------------------------------------------------------------------------------------------------------------
