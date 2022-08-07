@@ -34,3 +34,13 @@ D. MongoDB is a NoSQL Databases that uses documents to store data in an organice
 Answer: A and D
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+What is a Document?
+In a MongoDB Document what is the role of fields and values?
+
+A. Values do not have to be attached to fields, and can be stand alone data points.
+B. Each Field has a value associated with it.
+C. A field is a unique identified for a specific datapoint.
+
+Answer: B and C
+
+--------------------------------------------------------------------------------------------------------------------------------------------
