@@ -165,3 +165,13 @@ Note: This question evaluates an 'and' condition in SQL
 Answer: "South End Ave & Liberty St"
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+How many documents are returned by a find query as the default value?
+A. 1
+B. 10
+C. 20
+D. ALL
+
+Answer: C. 20 : The default configuration in MongoDB is to return only 20 documents for a given criteria
+This value is defined in "DBQuery.shellBatchSize"
+
+--------------------------------------------------------------------------------------------------------------------------------------------
