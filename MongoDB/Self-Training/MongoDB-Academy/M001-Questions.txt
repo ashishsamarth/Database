@@ -136,3 +136,15 @@ B. mongoexport
 Answer: mongodump
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+Which of the following commands will add a collection that is stored in animals.json to and Atlas cluster ?
+A. mongorestore
+B. mongodump
+C. mongoimport
+D. mongoexport
+
+Answer: C. mongoimport
+
+Note: The key to identify the correct answer between mongorestore and mongoimport is the file extension, if the file extension is "json" then the 
+answer is mongoimport if it would have been 'animals.bson' then answer would have been mongorestore.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
