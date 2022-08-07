@@ -154,3 +154,14 @@ For e.g.: sample_airbnb.listingsAndReviews
 Here: Database is - sample_airbnb and Collection is - listingsAndReviews
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+In the sample_training.trips collection a person with birth year 1961 took a trip that started at "Howard St & Centre St". What was the 
+end station name for that trip?
+
+Json Query in Data-Explorer : Collections tab
+{"birth year": 1961, "start station name": "Howard St & Centre St"}
+
+Note: This question evaluates an 'and' condition in SQL
+
+Answer: "South End Ave & Liberty St"
+
+--------------------------------------------------------------------------------------------------------------------------------------------
