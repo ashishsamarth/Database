@@ -19,3 +19,7 @@ Answer: B
 Note: A way to organize and store data as a set of field-value pairs
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+What is a Collection?
+An organized store of documents in MongoDB, usually with common fields between documents
+
+--------------------------------------------------------------------------------------------------------------------------------------------
