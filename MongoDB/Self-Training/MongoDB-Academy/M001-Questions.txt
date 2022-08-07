@@ -101,3 +101,10 @@ JSON rules:
  c. Must start and end with curly-brackets
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+Write BSON or JSON in the numbered blanks in the following scentences to make them true:
+
+a. MongoDB stortes data in --BSON, and you can then view it in --JSON
+b. --BSON is faster to parse and lighter to store than --JSON
+c. --JSON supports fewer data types than --BSON
+
+--------------------------------------------------------------------------------------------------------------------------------------------
