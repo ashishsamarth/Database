@@ -148,3 +148,9 @@ Note: The key to identify the correct answer between mongorestore and mongoimpor
 answer is mongoimport if it would have been 'animals.bson' then answer would have been mongorestore.
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+What is a namespace in MongoDB Data explorer?
+Answer: Its the concatenation of the database name and collection name
+For e.g.: sample_airbnb.listingsAndReviews
+Here: Database is - sample_airbnb and Collection is - listingsAndReviews
+
+--------------------------------------------------------------------------------------------------------------------------------------------
