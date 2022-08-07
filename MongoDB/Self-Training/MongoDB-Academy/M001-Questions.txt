@@ -55,3 +55,13 @@ D. Atlas has many tools and services within it that are built specifically for t
 Answer: A and D
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+What are Pros and Cons of JSON
+Pros: Friendly, Readable and Familiar
+Cons: 
+ a. Text-based : JSON is a text-based format, and text parsing is very slow
+ b. Space-Consuming: JSON’s readable format is far from space-efficient, another database concern
+ c. JSON only supports a limited number of basic data types
+
+Alternative solution to this as identified by MongoDB was using BSON (Binary JSON)
+
+--------------------------------------------------------------------------------------------------------------------------------------------
