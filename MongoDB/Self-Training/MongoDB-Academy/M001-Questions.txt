@@ -175,3 +175,16 @@ Answer: C. 20 : The default configuration in MongoDB is to return only 20 docume
 This value is defined in "DBQuery.shellBatchSize"
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+What is the command to use in mongoshell, if you want to view the next set of documents returned by a find command after the initial 20 has 
+been displayed?
+A. next
+B. more
+C. IT
+D. it
+
+Answer: D. it
+it - Is used to iterate through the cursor. 
+(cursor is an object which the find command has returned)
+Formally a cursor is pointer to the result set of a query.A pointer is a direct address to the memory location
+
+--------------------------------------------------------------------------------------------------------------------------------------------
