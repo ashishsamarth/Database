@@ -23,3 +23,14 @@ What is a Collection?
 An organized store of documents in MongoDB, usually with common fields between documents
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+What is the MongoDB Database?
+Select the statements that together help build the most complete definition of the MongoDB database:
+
+A. The MongoDB databse is an organized way to store and access data.
+B. MongoDB Database organizes documents in rows and columns.
+C. MongoDB's Database uses tables of related data
+D. MongoDB is a NoSQL Databases that uses documents to store data in an organiced way.
+
+Answer: A and D
+
+--------------------------------------------------------------------------------------------------------------------------------------------
