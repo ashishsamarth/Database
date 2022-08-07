@@ -108,3 +108,10 @@ b. --BSON is faster to parse and lighter to store than --JSON
 c. --JSON supports fewer data types than --BSON
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+What is the command to import data in JSON format?
+A. mongoimport
+B. mongorestore
+
+Answer: A. mongoimport
+
+--------------------------------------------------------------------------------------------------------------------------------------------
