@@ -88,3 +88,16 @@ continues to store the updated objects without the need to perform costly ALTER 
 scratch. 
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+What is JSON: Which of the following documents is correct JSON?
+
+A. ["name": "Devi", "age": 19, "major": "Computer Science"]
+B. {"name": "Devi", "age": 19, "major": "Computer Science"}
+C. {name: "Devi", age: 19, major: "Computer Science"}
+
+Answer: B
+JSON rules:
+ a. keys must have quotes
+ b. Key-Value pairs must be separated by comas
+ c. Must start and end with curly-brackets
+
+--------------------------------------------------------------------------------------------------------------------------------------------
