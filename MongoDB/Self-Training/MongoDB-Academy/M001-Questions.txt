@@ -457,3 +457,41 @@ Answer: The focus of this question is on "adding new fields", the only two new f
 "look" and "type", hence the answer is B and D.
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+Given the following structure of a document in the zips collection?
+
+{ _id: ObjectId("5c8eccc1caa187d17ca75e22"),
+  city: 'HUDSON',
+  zip: '54016',
+  loc: { y: 44.984187, x: 92.727062 },
+  pop: 16156,
+  state: 'WI',
+  'city class': 'A'}
+
+How would you delete a field from the document
+
+A. $remove
+B. $unset
+C. $delete
+
+Answer: B. $unset
+
+Explanation: Following would be the command: 
+
+db.zips.updateOne({"city": "HUDSON", "zip": "54016"}, {"$unset": {"city class": ""}})
+
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+
+db.zips.find({"city": "HUDSON", "zip": "54016"}).pretty()
+
+{ _id: ObjectId("5c8eccc1caa187d17ca75e22"),
+  city: 'HUDSON',
+  zip: '54016',
+  loc: { y: 44.984187, x: 92.727062 },
+  pop: 16156,
+  state: 'WI' }
+
+--------------------------------------------------------------------------------------------------------------------------------------------
