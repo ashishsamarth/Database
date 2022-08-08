@@ -277,3 +277,15 @@ D. findOne
 Answer: A. findOne()
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+Insert Errors: Select all true statements from the following list:
+
+A. MongoDB can store duplicate documents in the same colleciton, as long as their _id values are different
+B. MongoDB can always store duplicate documents in the same collections regardless of the _id value
+C. If a document is inserted without a provided _id value, then that document will fail to be inserted and cause a write error
+D. Their is no way to ensure that duplicate records are not stored in MongoDB
+E. If a document is inserted without a provided _id value, then the _id field and value will be automatically generated for the inserted document 
+before insertion
+
+Answer: A, E
+
+--------------------------------------------------------------------------------------------------------------------------------------------
