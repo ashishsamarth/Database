@@ -351,3 +351,28 @@ Will be executed successfully, since {"ordered": false} will continue execution 
 C. db.pets.insert([{"_id": 1, "pet": "cat"}, {"_id": 2, "pet": "Dog"}, {"_id": 3, "pet": "fish"}, {"_id": 4, "pet": "snake"}])
 Will be executed successfully for the top 3 documents, have unique values for _id, while the last one will fail for duplicate key error
 --------------------------------------------------------------------------------------------------------------------------------------------
+Updating Documents: MongoDB has a flexible data model, which means that you can have fields that contains documents, or arrays as their values
+Select any invalid MongoDB documents from the given choices.
+
+A. {"_id": 1,
+	"pet": "cat",
+	"attributes": [{"coat"; "fur", "type": "soft"}, 
+					{"defense": "claws", "location": "paws", "nickname": "murder mittens"}],
+	"name": "Furball"}
+
+B. {"_id": 1,
+	"pet": "cat",
+	"fur": "soft",
+	"claws": "sharp",
+	"name": "Furball"}
+
+C. {"_id": 1,
+	"pet": "cat",
+	"attributes": {"coat": "soft fur", "paws": "cute but deadly"},
+	"name": "Furball"}
+
+D. None of the above
+
+Answer: D. None of the above
+
+--------------------------------------------------------------------------------------------------------------------------------------------
