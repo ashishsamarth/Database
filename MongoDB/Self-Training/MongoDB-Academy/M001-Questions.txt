@@ -218,3 +218,12 @@ D. Interferes with the task
 Answer: B. Iterates through the cursor results
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+The mongo shell: Which of the following statements are true about the mongo shell?
+
+A. Mongo shell automatically returns an ordered list of results
+B. Its a fully functioning JavaScript interpreter
+C. It allows you to interact with your MongoDB instance without using a Graphical User Interface
+
+Answer: B and C
+
+--------------------------------------------------------------------------------------------------------------------------------------------
