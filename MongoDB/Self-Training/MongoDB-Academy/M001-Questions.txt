@@ -495,3 +495,19 @@ db.zips.find({"city": "HUDSON", "zip": "54016"}).pretty()
   state: 'WI' }
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+Deleting Documents: The sample dataset contains a few databases that we will not use in this couse. Clean up your Atlas cluster and get rid 
+of all the collections in these database:
+
+sample_analytics
+sample_geospatial
+sample_weatherdata
+
+Does removing all collections in a database also remove the database?
+
+A. Yes
+B. No
+
+Answer: A. Yes
+Note: MongoDB Database cannot be empty. It must have atleast one collection and the collection must have atleast one document
+
+--------------------------------------------------------------------------------------------------------------------------------------------
