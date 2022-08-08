@@ -227,3 +227,19 @@ C. It allows you to interact with your MongoDB instance without using a Graphica
 Answer: B and C
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+What is common field in every document?
+A. _id
+B. _rowid
+C. docid
+D. id
+
+Answer: A. _id
+Note: _id: Must have a unique value to differentiate between documents in a collection. It is an unique identifier
+You can have duplicate keys and values across different documents but value of _id can never be duplicated
+
+The value of _id is populated by MongoDB
+The type of _id is objectId(), It doesn't have to have the value of type 'objectId' its something that is created by default to ensure unique 
+values for the document.
+If your dataset have unique values that can be used for identification, those can be very well used as values for '_id'
+
+--------------------------------------------------------------------------------------------------------------------------------------------
