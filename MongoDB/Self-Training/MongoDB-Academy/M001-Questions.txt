@@ -511,3 +511,12 @@ Answer: A. Yes
 Note: MongoDB Database cannot be empty. It must have atleast one collection and the collection must have atleast one document
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+Deleting Documents: Which of the following commands will delete a collection name villians?
+
+A. db.villians.dropAll()
+B. db.villians.drop()
+C. db.villians.delete()
+
+Answer: B. db.villians.drop()
+
+--------------------------------------------------------------------------------------------------------------------------------------------
