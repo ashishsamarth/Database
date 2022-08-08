@@ -268,3 +268,12 @@ then the values are inserted.
 syntax: M001 mongoimport --uri="mongodb+srv://m001-student:m001-mongodb-basics@sandbox.delta.mongodb.net/sample_supplies" --drop sales.json
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+What is the command to get a general idea of the shape of documents in a collection?
+A. findOne()
+B. sampleOne()
+C. sample()
+D. findOne
+
+Answer: A. findOne()
+
+--------------------------------------------------------------------------------------------------------------------------------------------
