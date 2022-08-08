@@ -188,3 +188,13 @@ it - Is used to iterate through the cursor.
 Formally a cursor is pointer to the result set of a query.A pointer is a direct address to the memory location
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+What is the command to get the number of returned results?
+A. more
+B. count
+C. count()
+
+Answer: C. count()
+Syntax: db.zips.find({"state":"NY", "city":"ALBANY"}).count() 
+Result: 7
+
+--------------------------------------------------------------------------------------------------------------------------------------------
