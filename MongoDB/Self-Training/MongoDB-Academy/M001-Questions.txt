@@ -376,3 +376,21 @@ D. None of the above
 Answer: D. None of the above
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+Update all the documents in the zips collection to increment the population by 10 for HUDSON city
+Here's the sample structure of the document
+
+{ _id: ObjectId("5c8eccc1caa187d17ca75e22"),
+  city: 'HUDSON',
+  zip: '54016',
+  loc: { y: 44.984187, x: 92.727062 },
+  pop: 16136,
+  state: 'WI' }
+
+
+Answer: db.zips.updateMany({"city": "HUDSON"}, {"$inc": {"pop": 10}})
+
+Explanation: 
+Function: updateMany() : is used to update more than one document in the collection
+Operator: "$inc" : is the increment operator in MongoDB
+
+--------------------------------------------------------------------------------------------------------------------------------------------
