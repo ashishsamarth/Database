@@ -289,3 +289,19 @@ before insertion
 Answer: A, E
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+What will be the behaviour of the following insert command?
+db.inspections.insert([{"_id":1, "test":1}, {"_id":1, "test":2}, {"_id":3, "test":3}])
+
+A. All three documents are inserted in the inspections collection
+B. The insert command fails and none of the documents are inserted in the inspections collection
+C. The insert command partially fails for document with "_id":1, but successfully inserts document with "_id":3
+D. The document with only {"_id":1, "test":1} is inserted successfully, and fails for {"_id":1, "test":2}
+
+Answer: D. The document with only {"_id":1, "test":1} is inserted successfully, and fails for {"_id":1, "test":2}
+
+Explanation: The default behaviour of insert command is :- To insert the documents in the same order they are list in the array
+Hence, the first document {"_id":1, "test":1} gets inserted successfully, but {"_id":1, "test":2} fails with E11000 Duplicate key error 
+collection and since the insert failed for the 2nd document, the command execution stops and insertion of {"_id":3, "test":3} is not 
+attempted.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
