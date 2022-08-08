@@ -520,3 +520,26 @@ C. db.villians.delete()
 Answer: B. db.villians.drop()
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+Given the following structure in the trips collection
+
+{_id:572bb8222b288919b68ac2d4
+tripduration: 61
+start station id: 3150
+start station name :"E 85 St & York Ave"
+end station id: 3150
+end station name: "E 85 St & York Ave"
+bikeid: 22299
+usertype: "Subscriber"
+birth year: 1989
+gender: 1}
+
+Which of the following commands will provide results where the trip duration was less than or equal to 70?
+
+A. db.trips.find({"tripduration": {"$lte": 70}})
+B. db.trips.find({"tripduration": {"$lt": 70}})
+C. db.trips.find({"tripduration": ["$lte": 70]})
+D. db.trips.find({"tripduration": ("$lt": 70)})
+
+Answer: A. db.trips.find({"tripduration": {"$lte": 70}})
+
+--------------------------------------------------------------------------------------------------------------------------------------------
