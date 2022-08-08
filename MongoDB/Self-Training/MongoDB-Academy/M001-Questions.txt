@@ -316,3 +316,19 @@ Answer: B. The insert command succeeds for {"_id":1, "test":1} and {"_id":3, "te
 Note: In case of an 'unordered' or {"ordered": fasle} insert, every document with a unique '_id' gets inserted to the collection.
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+Assuming the above commands have been executed successfully, what will be behavior of the following command?
+
+db.inspection.insert([{"_id": 1, "test": 1}, {"_id": 3, "test":3}])
+
+A. Execution will fail with duplicate key error
+B. Execution will succeed without any errors
+
+Answer: B. Execution will succeed without any errors
+Note: Their is a typo in the collections name, its 'inspection' instead of 'inspections'
+This insert command will create the collection (if it doesn't exist already) 'inspection' and then insert the document in the collection
+
+same is valid for databases as well, if it does not exist, 'use dbname' will create it ONLY if their is atleast one collection and that 
+collection has atleast one document in that collection.
+If you simply execute 'use dbname' and do not create a collection and a document in the collection, 'use dbname' will NOT create a DB.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
