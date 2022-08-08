@@ -435,5 +435,25 @@ db.grades.updateOne({ "student_id": 250, "class_id": 339 },
                                 }
                      })
 
+--------------------------------------------------------------------------------------------------------------------------------------------
+Updating documents in the shell: Given a pets collection where each document has the following structure and fields:
+
+{
+ "_id": ObjectId("5ec414e5e722bb1f65a25451"),
+ "pet": "wolf",
+ "domestic?": false,
+ "diet": "carnivorous",
+ "climate": ["polar", "equatorial", "continental", "mountain"]
+}
+
+Which of the following commands will add new fields to the updated documents ?
+
+A. db.pets.updateMany({"pet": "cat"}, {"$set": {"domestic ?": true, "diet": "mice"}})
+B. db.pets.updateMany({"pet": "cat"}, {"$push": {"climate": "continental", "look": "adorable"}})
+C. db.pets.updateMany({"pet": "cat"}, {"$set": {"climate": "continental"}})
+D. db.pets.updateMany({"pet": "cat"}, {"$set": {"type": "dangerous", "look": "adorable"}})
+
+Answer: The focus of this question is on "adding new fields", the only two new fields that do not exist in the structure already are
+"look" and "type", hence the answer is B and D.
 
 --------------------------------------------------------------------------------------------------------------------------------------------
