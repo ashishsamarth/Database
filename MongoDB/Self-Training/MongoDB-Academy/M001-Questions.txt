@@ -305,3 +305,14 @@ collection and since the insert failed for the 2nd document, the command executi
 attempted.
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+What will be the behaviour of the following insert command?
+db.inspections.insert([{"_id":1, "test":1}, {"_id":1, "test":2}, {"_id":3, "test":3}], {"ordered": fasle})
+
+A. The document with only {"_id":1, "test":1} is inserted successfully, and fails for {"_id":1, "test":2}
+B. The insert command succeeds for {"_id":1, "test":1} and {"_id":3, "test":3} but fails for {"_id":1, "test":2}
+C. The insert command succeeds for {"_id":1, "test":2} and {"_id":3, "test":3} but fails for {"_id":1, "test":1}
+
+Answer: B. The insert command succeeds for {"_id":1, "test":1} and {"_id":3, "test":3} but fails for {"_id":1, "test":2}
+Note: In case of an 'unordered' or {"ordered": fasle} insert, every document with a unique '_id' gets inserted to the collection.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
