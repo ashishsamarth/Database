@@ -253,3 +253,18 @@ D. You can select a non ObjectId type value when inserting a new document, as lo
 Answer: A and D
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+In a scenario of mongoimport what does E11000 duplicate key error collection mean?
+A. The JSON file being imported has different encoding
+B. The data in JSON file already exists in the collection
+C. The JSON file is corrupted
+D. The key defined in the mongoimport command is incorrect
+
+Answer: B. The data in JSON file already exists in the collection
+The insertion failed since the collection already has the document with same _id value we are trying to insert
+
+A good way to handle this key error is to add the --drop directive in the mongoimport command. That way the collection is first dropped and 
+then the values are inserted.
+
+syntax: M001 mongoimport --uri="mongodb+srv://m001-student:m001-mongodb-basics@sandbox.delta.mongodb.net/sample_supplies" --drop sales.json
+
+--------------------------------------------------------------------------------------------------------------------------------------------
