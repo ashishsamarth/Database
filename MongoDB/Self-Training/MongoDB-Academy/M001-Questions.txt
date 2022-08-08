@@ -208,3 +208,13 @@ D. It returns top 20 rows in ascending order of 'objectID'
 Answer: A. It returns first 20 rows from the collection
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+Find Command: What does "it" do in the mongo shell?
+
+A. It is not a mongo shell command
+B. Iterates through the cursor results
+C. Warns about imminent termination
+D. Interferes with the task
+
+Answer: B. Iterates through the cursor results
+
+--------------------------------------------------------------------------------------------------------------------------------------------
