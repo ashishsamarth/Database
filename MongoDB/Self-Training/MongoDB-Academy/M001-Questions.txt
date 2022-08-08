@@ -394,3 +394,46 @@ Function: updateMany() : is used to update more than one document in the collect
 Operator: "$inc" : is the increment operator in MongoDB
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+Update the population of HUDSON city with zip code 54016 to 17630
+Here's the original document for the criteria
+
+{ _id: ObjectId("5c8eccc1caa187d17ca75e22"),
+  city: 'HUDSON',
+  zip: '54016',
+  loc: { y: 44.984187, x: 92.727062 },
+  pop: 16136,
+  state: 'WI' }
+
+
+Answer: db.zips.updateOne({"city": "HUDSON", "zip": "54106"}, {"$set": {"pop": 17630}})
+
+Explanation: 
+Function: updateOne() : is used to update a single document in the collection
+Operator: "$set" : is used to set an explicit value of a key in the document
+
+Note: If the key mentioned in the set operator does not exist in the document, then it will add that key with the provided value to the document
+This behavior is similar to what happens in the insert function for a non-existing key
+
+Additional Info: If you need to add a key to a nested array of documents, then use "$push" instead of "set"
+
+for e.g.:
+sample document from grades collection:
+
+{ _id: ObjectId("56d5f7eb604eb380b0d8d8dc"),
+  student_id: 1,
+  scores: 
+   [ { type: 'exam', score: 21.311594783977426 },
+     { type: 'quiz', score: 58.11840994732081 },
+     { type: 'homework', score: 83.99635123409774 },
+     { type: 'homework', score: 90.06771379981804 } ],
+  class_id: 265 }
+
+
+db.grades.updateOne({ "student_id": 250, "class_id": 339 },
+                    { "$push": { "scores": { "type": "extra credit",
+                                             "score": 100 }
+                                }
+                     })
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
