@@ -198,3 +198,13 @@ Syntax: db.zips.find({"state":"NY", "city":"ALBANY"}).count()
 Result: 7
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+What happens if you run a find command on a collection without any criteria?
+db.zips.find({})
+A. It returns first 20 rows from the collection
+B. It fails
+C. It returns randomly selected 20 rows from the collection
+D. It returns top 20 rows in ascending order of 'objectID'
+
+Answer: A. It returns first 20 rows from the collection
+
+--------------------------------------------------------------------------------------------------------------------------------------------
