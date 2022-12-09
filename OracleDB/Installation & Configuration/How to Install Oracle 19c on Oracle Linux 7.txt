@@ -163,3 +163,9 @@
         -redoLogFileSize 50                                                       \
         -emConfiguration NONE                                                     \
         -ignorePreReqs
+
+14. Once Step#13 is completed, perform the following
+    As a 'oracle' user, edit the following file and change the entry from 'N' to 'Y'
+
+    In /etc/oratab
+    cdb19c:/u01/app/oracle/product/db/19.0.0/dbhome_1:Y
