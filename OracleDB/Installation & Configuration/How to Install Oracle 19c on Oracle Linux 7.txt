@@ -26,3 +26,11 @@
 
     passwd oracle
 
+6.  With default install of Oracle Linux, the 'secure linux' parameter is set to 'enforcing', we need to modify it to 'permissive' as a part of db installation
+    As a 'root' user, edit the following file
+
+    /etc/selinux/config
+
+    comment the line: SELINUX=enforcing
+    Add a new line: SELINUX=permissive
+
