@@ -25,3 +25,17 @@ If you wish to install all the sample schemas in one go, perform the following
     a.  sqlplus sys as sysdba
     b.  alter session set container=samarth_db_sandbox;
     c.  @mksample syspassword1 syspassword1 passwordforhr passwordforoe passwordforpm passwordforix passwordforsh passwordforbi users temp $ORACLE_HOME/demo/log localhost:1521/samarth_db_sandbox
+
+    Explanation:
+        1st entry syspassword1                          :-  Is the password for sys
+        2nd entry syspassword1                          :-  Is the password for system
+        3rd entry passwordforhr                         :-  Is the password for hr schema
+        4rth entry passwordforoe                        :-  Is the password for oe schema
+        5th entry passwordforpm                         :-  Is the password for pm schema
+        6th entry passwordforix                         :-  Is the password for is schema
+        7th entry passwordforsh                         :-  Is the password for sh schema
+        8th entry passwordforbi                         :-  Is the password for bi schema
+        9th entry users                                 :-  Is the value for default tablespace
+        10th entry temp                                 :-  Is the value for temp tablespace
+        11th entry $ORACLE_HOME/demo/log                :-  Is the value for schema installation log location
+        12th entry localhost:1521/samarth_db_sandbox    :-  Is the value for connection string
