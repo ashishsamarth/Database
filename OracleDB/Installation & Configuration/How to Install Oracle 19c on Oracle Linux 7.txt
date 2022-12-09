@@ -1,0 +1,11 @@
+1. The machine must have a fully qualified name for the server.
+    check the /etc/hosts file and add the following line
+
+    ip-address-of-the server    hostname
+
+e.g.
+    192.168.1.125   ol7
+
+Note: The letter case (upper or lower) of hostname must be consistent across the board
+
+2. The hostname in /etc/hostname must be same as the hostname defined in /etc/hosts
