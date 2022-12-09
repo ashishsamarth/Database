@@ -145,7 +145,7 @@
     
     b.  To create a database in silent mode
 
-        dbca -silent -createDatabase                                                   \
+        dbca -silent -createDatabase                                              \
         -templateName General_Purpose.dbc                                         \
         -gdbname ${ORACLE_SID} -sid  ${ORACLE_SID} -responseFile NO_VALUE         \
         -characterSet AL32UTF8                                                    \
@@ -186,9 +186,9 @@
             show con_name;
     
     e.  If the PDB is open, the following statement will throw an error, if its closed, then the statement will open the PDB
-        ALTER PLUGGABLE DATABASE samarth_db_sandbox OPEN;
-        COMMIT;
+            ALTER PLUGGABLE DATABASE samarth_db_sandbox OPEN;
+            COMMIT;
 
     f.  Save the opened state of PDB
-        ALTER PLUGGABLE DATABASE samarth_db_sandbox SAVE STATE;
-        COMMIT;
+            ALTER PLUGGABLE DATABASE samarth_db_sandbox SAVE STATE;
+            COMMIT;
