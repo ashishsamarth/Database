@@ -2,8 +2,26 @@ By default the zipped file of 'LINUX.X64_193000_db_home.zip', comes with 'Human_
 If you wish to install all the sample schemas in one go, perform the following
 
 1.  Download the 'db-sample-schemas-19c.zip' to your local machine and then ftp the zipped file to /tmp on the server.
+
 2.  As a 'oracle' user, unzip the 'db-sample-schemas-19c.zip' in /tmp.
+
 3.  As a 'oracle' user, navigate to $ORACLE_HOME/demo/schema and except the 'log' directory, delete all files and directories.
+
 4.  As a 'oracle' user, move all the directories and files inside 'db-sample-schemas-19c' to $ORACLE_HOME/demo/schema.
+
 5.  The sample schemas have files containing variables that needs to be replaced, before you can run mksample.sql to install the schemas
+
     As a 'oracle' user, execute the following perl command to replace the value of variables.
+
+    Assumption:- your pwd is = $ORACLE_HOME/demo/schema
+
+    perl -p -i.bak -e 's#__SUB__CWD__#'$(pwd)'#g' *.sql */*.sql */*.dat
+
+6.  Login to database as a 'sys' user, and execute the following statements
+    Assumption:- 
+        1.  LSNR is up and Database is started.
+        2.  Your pwd is = $ORACLE_HOME/demo/schema 
+
+    a.  sqlplus sys as sysdba
+    b.  alter session set container=samarth_db_sandbox;
+    c.  @mksample syspassword1 syspassword1 passwordforhr passwordforoe passwordforpm passwordforix passwordforsh passwordforbi users temp $ORACLE_HOME/demo/log localhost:1521/samarth_db_sandbox
