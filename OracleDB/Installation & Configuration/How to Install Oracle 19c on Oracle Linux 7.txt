@@ -104,3 +104,8 @@
 
     As a 'oracle' user, unzip the zipped file inside $ORACLE_HOME
 
+    cd $ORACLE_HOME
+    unzip -oq /tmp/LINUX.X64_193000_db_home.zip
+
+11. Once the file is unzipped in $ORACLE_HOME successfully, run the 'installer in silent mode'
+    Running in silent mode, allows you to feed variables / values as a part of command execution, rather than provided them as a part of db installation progress
