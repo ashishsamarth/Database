@@ -48,3 +48,8 @@
     chmod -R 775 /u01 /u02
     mkdir /home/oracle/scripts
 
+8.  We have to define some specific variables for oracle user, so
+    As a 'oracle' user, edit the '.bashrc' under /home/oracle and add the following
+
+    # Oracle 19c Configurations
+    
