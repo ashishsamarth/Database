@@ -38,3 +38,12 @@
     As a 'root' user, execute the following for the changes to take effect
 
     setenforce Permissive
+
+7.  Create the following directory structures
+    As a 'root' user, execute the following
+
+    mkdir -p /u01/app/oracle/product/db/19.0.0/dbhome_1
+    mkdir -p /u02/oradata
+    chown -R oracle:oinstall /u01 /u02
+    chmod -R 775 /u01 /u02
+
