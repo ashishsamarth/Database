@@ -169,3 +169,17 @@
 
     In /etc/oratab
     cdb19c:/u01/app/oracle/product/db/19.0.0/dbhome_1:Y
+
+15. Oracle 19c Database has been installed successfully on Oracle Linux 7. One last step is to open the PDB (pluggable database, that we created), since the default status of the PDB is closed
+    So we will open the database and save its state. This will ensure that the PDB is opened automatically after ever DB restart
+
+    a.  Login to DB as a sys user
+            sqlplus sys as sysdba
+    
+    b.  Check if you are connected to CDB or PDB
+            show con_name;
+    
+    c.  If you are connected to CDB, then change the session to PDB
+            alter session set container_name=samarth_db_sandbox;
+    
+    d.  Once the above statement is executed successfully, check if you are connected to PDB now.
