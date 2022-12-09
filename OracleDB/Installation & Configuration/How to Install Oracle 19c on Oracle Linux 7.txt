@@ -9,3 +9,5 @@ e.g.
 Note: The letter case (upper or lower) of hostname must be consistent across the board
 
 2. The hostname in /etc/hostname must be same as the hostname defined in /etc/hosts
+
+3. The advantage of using oracle 7 over fedora or Centos is, their is a oracle db preinstall package available for oracle linux with 'yum'
