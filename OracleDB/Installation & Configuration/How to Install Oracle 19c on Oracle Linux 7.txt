@@ -93,3 +93,14 @@
     Assign execute permissions to the startup and shutdown scripts
     
     chmod 700 start_db.sh stop_db.sh
+
+10. For the newly added oracle 19c variables to take effect, source the .bash_profile
+    As a 'oracle' user, execute the following
+
+    source ~/.bash_profile
+
+10. Unzip the LINUX version of DB installation in to oracle home
+    Assumption: You have the 'LINUX.X64_193000_db_home.zip' downloaded and uploaded to /tmp of your target server, and the owner of this file is 'oracle' user
+
+    As a 'oracle' user, unzip the zipped file inside $ORACLE_HOME
+
