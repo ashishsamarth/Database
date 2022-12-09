@@ -15,3 +15,8 @@
     As a 'root' user, execute the following
 
     yum install -y oracle-database-preinstall-19c
+
+4.  You may want pull and install the os updates and security fixes, but its not mandatory. If you want to update it
+    As a 'root' user, execute the following
+
+    yum update -y
