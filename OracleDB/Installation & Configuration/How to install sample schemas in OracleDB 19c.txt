@@ -1,0 +1,7 @@
+By default the zipped file of 'LINUX.X64_193000_db_home.zip', comes with 'Human_Resources' schema configuration files. But even this schema is not pre-installed.
+If you wish to install all the sample schemas in one go, perform the following
+
+1.  Download the 'db-sample-schemas-19c.zip' to your local machine and then ftp the zipped file to /tmp on the server.
+2.  As a 'oracle' user, unzip the 'db-sample-schemas-19c.zip' in /tmp.
+3.  As a 'oracle' user, navigate to $ORACLE_HOME/demo/schema and except the 'log' directory, delete all files and directories.
+4.  As a 'oracle' user, move all the directories and files inside 'db-sample-schemas-19c' to $ORACLE_HOME/demo/schema.
