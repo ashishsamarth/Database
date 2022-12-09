@@ -1,0 +1,13 @@
+As a part of the oracle db 19c installation, we did not do anything with the connection port (1521). This means, if the 'firewalld' service 
+is running, then port 1521 is blocked for incoming traffice, unless traffic is allowed on this port.
+
+To open a specific port in Oracle Linux 7
+1.  As a 'root' user, execute the following
+        firewall-cmd --permanent --add-port=1521/tcp
+
+2.  As a 'root' user, execute the following
+        firewall-cmd --reload
+
+This will ensure that the specific port is opened, and firewalld changes have taken effect.
+
+Now you can connect to this DB using the hostname, port # and Service name.
