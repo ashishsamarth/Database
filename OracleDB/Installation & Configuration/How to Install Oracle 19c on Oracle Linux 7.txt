@@ -20,3 +20,9 @@
     As a 'root' user, execute the following
 
     yum update -y
+
+5.  Once the preinstall is completed, go ahead and set up a password for the 'oracle' user (This was created as a part of preinstall)
+    As a 'root' user, execute the following
+
+    passwd oracle
+
