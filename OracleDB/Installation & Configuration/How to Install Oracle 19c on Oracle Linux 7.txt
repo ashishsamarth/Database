@@ -34,3 +34,7 @@
     comment the line: SELINUX=enforcing
     Add a new line: SELINUX=permissive
 
+    After the file has been modified,
+    As a 'root' user, execute the following for the changes to take effect
+
+    setenforce Permissive
