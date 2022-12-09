@@ -39,3 +39,5 @@ If you wish to install all the sample schemas in one go, perform the following
         10th entry temp                                 :-  Is the value for temp tablespace
         11th entry $ORACLE_HOME/demo/log                :-  Is the value for schema installation log location
         12th entry localhost:1521/samarth_db_sandbox    :-  Is the value for connection string
+
+7.  Once the script execution completes, the sample schemas will be installed successfully
