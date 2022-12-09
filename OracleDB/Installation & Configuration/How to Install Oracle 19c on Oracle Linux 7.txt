@@ -183,3 +183,12 @@
             alter session set container_name=samarth_db_sandbox;
     
     d.  Once the above statement is executed successfully, check if you are connected to PDB now.
+            show con_name;
+    
+    e.  If the PDB is open, the following statement will throw an error, if its closed, then the statement will open the PDB
+        ALTER PLUGGABLE DATABASE samarth_db_sandbox OPEN;
+        COMMIT;
+
+    f.  Save the opened state of PDB
+        ALTER PLUGGABLE DATABASE samarth_db_sandbox SAVE STATE;
+        COMMIT;
