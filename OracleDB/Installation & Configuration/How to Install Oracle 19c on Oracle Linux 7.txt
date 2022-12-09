@@ -46,4 +46,5 @@
     mkdir -p /u02/oradata
     chown -R oracle:oinstall /u01 /u02
     chmod -R 775 /u01 /u02
+    mkdir /home/oracle/scripts
 
