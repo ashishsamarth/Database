@@ -130,4 +130,9 @@
     SECURITY_UPDATES_VIA_MYORACLESUPPORT=false                                 \
     DECLINE_SECURITY_UPDATES=true
 
-12.     
+12. Installation of DB has few scripts that needs to be executed as 'root' user.
+    Open a new terminal and login as 'root' user.
+
+    Once step#11 is completed, execute the following
+    . /u01/app/oraInventory/orainstRoot.sh
+    . /u01/app/oracle/product/db/19.0.0/dbhome_1/root.sh
