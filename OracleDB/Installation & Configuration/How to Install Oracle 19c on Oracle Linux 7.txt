@@ -180,7 +180,7 @@
             show con_name;
     
     c.  If you are connected to CDB, then change the session to PDB
-            alter session set container_name=samarth_db_sandbox;
+            alter session set container=samarth_db_sandbox;
     
     d.  Once the above statement is executed successfully, check if you are connected to PDB now.
             show con_name;
