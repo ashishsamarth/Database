@@ -1,0 +1,9 @@
+Issue: You are able to connect to a particular schema from SQL Developer using the hostname, port 
+and Service name, but not able to connect to the same schema from sqlplus.
+
+Root Cause: This happens, since the Listener.ora and tnsnames.ora is not explicitly defined in $TNS_ADMIN
+
+Usual Location of $TNS_ADMIN is:-   /u01/app/oracle/product/21.3.0/dbhome_1/network/admin
+
+Avoid manually defining the listener.ora and tnsnames.ora, rather use the 'netmgr' utility
+
