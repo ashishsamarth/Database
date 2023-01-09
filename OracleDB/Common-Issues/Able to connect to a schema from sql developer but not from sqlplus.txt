@@ -7,3 +7,21 @@ Usual Location of $TNS_ADMIN is:-   /u01/app/oracle/product/21.3.0/dbhome_1/netw
 
 Avoid manually defining the listener.ora and tnsnames.ora, rather use the 'netmgr' utility
 
+1.  Once you are logged in as 'oracle', execute the following on terminal to open net manager utility
+        netmgr
+
+2.  A new UI would open, with the header 'Oracle Net Manager'
+    Under the 'Oracle Net Configuration', expand 'Local'
+
+    You will see, three sub-sections, 'Profile', 'Service Naming' and Listeners
+
+3.  Expand 'Service Naming' and click on '+' sign
+    Provide the following
+        a.  Net Service name - orclpdb21c
+        b.  Select the Protocol as - TCP/IP (Internet Protocol)
+        c.  hostname - as hostname of your server where oracle db is installed
+        d.  Port Number - 1521
+        e.  Service Name - orclpdb21c
+        f.  Connection Type - Dedicated Server
+
+4.  
