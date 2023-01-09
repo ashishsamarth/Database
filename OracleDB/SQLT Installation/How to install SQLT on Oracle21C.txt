@@ -1,0 +1,42 @@
+Assumption:- You have downloaded the latest version of SQLT from oracle support website
+
+1.  Once you have the sqlt (compressed file) downloaded to the local machine, ftp it to the /tmp directory of your server as oracle user
+
+2.  Navigate to /home/oracle, and execute the following command to decompress the SQLT utility
+        unzip -oq /tmp/sqlt.zip
+
+3.  Navigate to /home/oracle/sqlt/install, and verify you have a 'sql' file with the name - 'sqcsilent2.sql'
+
+4.  Now, connect to database as a sys user
+        sqlplus / as sysdba
+
+5.  Initially, I tried to install the SQLT utility without providing the connect parameters, but it failed multiple time, the following is the only way which worked for me
+
+6.  The installation will need the following parameters
+        a.  Connect Identifier of your PDB
+        b.  Password for SYS user
+        c.  DEFAULT Tablespace  - USERS
+        d.  TEMP Tablespace - TEMP
+        e.  Main Application user- I utilized the 'HR' schema, hence my user is 'HR'
+        f.  'T' this is related to licensing and features
+
+7.  Since, I installed the utility on PDB, I had to change the container to PDB, via the following command
+        Alter Session Set Container=MYPDBNAME;
+
+8.  Now execute the following to install the SQLT utility
+        @sqcsilent2 @ConnectIdentifier SYS_PASSWORD DEFAULT_TABLESPACE TEMP_TABLESPACE APPLICATION_USER T
+
+9.  It takes about 5 mins for the installation to complete, the logs will indicate the following
+        SQCSILENT Completed. Installation completed successfully
+        SQCSILENT2 Completed. Installation completed successfully
+
+10. Once the utility is installed successfully, the installation can be verified via the following sql code
+
+        SELECT
+        'SQLT version number: '||sqltxplain.sqlt$a.get_param('tool_version')||CHR(10)||
+        'SQLT version date : '||sqltxplain.sqlt$a.get_param('tool_date')||CHR(10)||
+        'Installation date : '||sqltxplain.sqlt$a.get_param('install_date') sqlt_version
+        FROM DUAL;
+
+        Output:
+        "SQLT version number: 19.1.200226 SQLT version date : 2020-02-26 Installation date : 2023-01-09/10:23:08"
