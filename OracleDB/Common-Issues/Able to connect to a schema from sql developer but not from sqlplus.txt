@@ -24,4 +24,21 @@ Avoid manually defining the listener.ora and tnsnames.ora, rather use the 'netmg
         e.  Service Name - orclpdb21c
         f.  Connection Type - Dedicated Server
 
-4.  
+4.  Expand 'Listeners' and click on '+' sign
+    Provide the following
+        a.  Select the name as 'LISTENER'
+        b.  Click on 'Add Address'
+        c.  Under 'Network Address' Select the following
+            Protocol    -   TCP/IP
+            Host        -   as hostname of your server where oracle db is installed
+            Port        -   1521
+
+5.  Now click on File >> Save Net Configuration
+
+6.  Execute the folowing, for changes to take effect
+        lsnrctl reload
+
+7.  Now try to connect as specific user
+        sqlplus username/password@orclpdb21c
+
+8.  You should be able to connect successfully.
