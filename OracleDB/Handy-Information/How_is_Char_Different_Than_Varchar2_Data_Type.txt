@@ -1,0 +1,8 @@
+CHAR:- Can store strings and text values up to a maximum value of 2000 characters
+VARCHAR2:- Can store strings and text values up to a maximum value of 4000 characters
+
+If a column is defined as CHAR(10):- If the string entered is less than 10 characters, space characters
+will be appended to the string, to meet the length of 10
+
+If a column is defined as VARCHAR2(10):- If the string entered is less than 10 characters, no additional 
+space characters will be appended to the string, to meet the length of 10
