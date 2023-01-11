@@ -40,7 +40,7 @@ Just like the FLOAT data type, Oracle includes a DECIMAL data type that is also 
 
 
 BINARY_FLOAT:
-The BINARY_FLOAT data type is used for storing floating-point numbers, which are numbers that contain decimal places. It’s similar to “float” data types in other programming languages
+The BINARY_FLOAT data type is used for storing floating-point numbers, which are numbers that contain decimal places. It’s similar to “float” data types in other programming languages. This has 32-bit precision
 There are a few differences between BINARY_FLOAT and the NUMBER data type:
 
     a.  BINARY_FLOAT can often perform arithmetic calculations faster than NUMBER
@@ -48,3 +48,11 @@ There are a few differences between BINARY_FLOAT and the NUMBER data type:
     c.  BINARY_FLOAT is an approximate definition, where NUMBER is an exact definition
 
 Note:- When a BINARY_FLOAT value is stored, an approximate value is stored. This can cause rounding issues if you’re using many calculations on this number. However, it’s good for storing large decimal or floating-point numbers.
+
+
+BINARY_DOUBLE:
+BINARY_DOUBLE data type is very similar to the BINARY_FLOAT data type:
+    a.  They both store floating-point numbers.
+    b.  They both store numbers in an approximate way, rather than the exact way that NUMBER does
+
+However, BINARY_FLOAT is a 32-bit precision value and BINARY_DOUBLE is a 64-bit precision value. This means it can store many more decimal places than BINARY_FLOAT. If you need to store a large decimal number, and BINARY_FLOAT cannot handle it, then BINARY_DOUBLE may be a good option
