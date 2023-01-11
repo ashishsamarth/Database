@@ -36,3 +36,9 @@ The advantages of using this data type are:
     a.  You can store the data in a single column, and not two columns, saving time with your queries and saving space on the database.
     b.  It ensures only valid values are allowed.
 
+
+INTERVAL DAY TO SECOND:
+INTERVAL DAY TO SECOND is another data type used to store a “period of time.” It allows you store days, hours, minutes, and seconds.
+For example, a value of 213 days, 14 hours, 28 minutes and 17 seconds is displayed as “213 14:28:17.
+Just like the INTERVAL YEAR TO MONTH data type, it allows you to store all of this information in a single column. It also ensures you store only valid data.
+
