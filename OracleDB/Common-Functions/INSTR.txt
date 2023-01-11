@@ -20,11 +20,11 @@ WHERE 1=1;
 Output:
 CUST_STREET_ADDRESS             Start_Position_of_String
 27 North Sagadahoc Boulevard	4
-47 South Kanabec Road	        0
-57 North 3rd Drive	            4
-67 East Mcintosh Avenue	        0
-107 North Saguache Avenue	    5
-117 West Gloucester Avenue	    0
+47 South Kanabec Road   0
+57 North 3rd Drive  4
+67 East Mcintosh Avenue 0
+107 North Saguache Avenue   5
+117 West Gloucester Avenue  0
 
 
 SELECT CUST_STREET_ADDRESS,
