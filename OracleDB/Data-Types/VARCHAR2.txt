@@ -4,3 +4,5 @@ VARCHAR2 also stores strings or text values, just like CHAR, with following diff
 The reason, its called VARCHAR2 and not CHAR, is because, even if you define the length of the element 
 as VARCHAR2(20), but the string is only 5 characters long, the string will not be appended with 15 spaces 
 at the end, unlike 'CHAR'
+
+How to Define: VARCHAR2(50) , here the number is the length of the string to be stored
