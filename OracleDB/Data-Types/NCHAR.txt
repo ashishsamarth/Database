@@ -1,0 +1,23 @@
+NCHAR data type is short for “Unicode character.” It’s very similar to the CHAR datatype, as it stores 
+character data of a fixed length and adds spaces for shorter values to bring the value up to the length you have specified
+
+It’s used for storing text values that contain Unicode characters. Unicode characters are a set of 
+special characters that can be used in software. They have their own data type in Oracle, as they can 
+often require more than one byte to store the character. 
+
+Some examples of Unicode characters are
+
+Mathematical characters, such as the Greek symbol that represents
+“sum”: Σ
+
+Many characters with accents: for example, â
+
+The standard characters, such as the alphabet and symbols visible on a keyboard, can be stored in a 
+single byte of data per character. This makes it possible to store in a CHAR data type, where one 
+byte equals one character.
+
+For Unicode characters, it’s possible that a character needs to be stored in multiple bytes, so a 
+special data type is needed. This means that if you want to store these special Unicode characters, 
+and you need to store them in a fixed length, use NCHAR instead of CHAR
+
+How to Define: NCHAR(30) , here the number is the length of the string to be stored
