@@ -22,3 +22,29 @@ NUMBER(p, s)
 Example:
 To define a number that has ten total digits, with three decimal places, you would write this
 NUMBER(10, 3)
+
+
+
+INTEGER:
+INTEGER data type is an SQL standard data type, which means it is in all SQL databases. However, in Oracle, it’s the same as defining a NUMBER(38) data type, which is a NUMBER with 38 digits and 0 decimal places.
+Because the INTEGER data type is actually translated to a NUMBER(38) data type, it’s better to use NUMBER. It allows you more freedom with the size of the value, if you don’t want a 38-digit number.
+
+
+FLOAT:
+Oracle includes a FLOAT data type, which is an ANSI standard data type (meaning it is available in all types of SQL). However, just like INTEGER, the FLOAT data type is translated internally by the Oracle database to NUMBER
+So, rather than using the FLOAT data type, which is translated to NUMBER, its better to use the NUMBER.
+
+
+DECIMAL:
+Just like the FLOAT data type, Oracle includes a DECIMAL data type that is also an ANSI standard data type. It’s also translated to a NUMBER data type by the Oracle database.
+
+
+BINARY_FLOAT:
+The BINARY_FLOAT data type is used for storing floating-point numbers, which are numbers that contain decimal places. It’s similar to “float” data types in other programming languages
+There are a few differences between BINARY_FLOAT and the NUMBER data type:
+
+    a.  BINARY_FLOAT can often perform arithmetic calculations faster than NUMBER
+    b.  BINARY_FLOAT is often smaller to store than NUMBER
+    c.  BINARY_FLOAT is an approximate definition, where NUMBER is an exact definition
+
+Note:- When a BINARY_FLOAT value is stored, an approximate value is stored. This can cause rounding issues if you’re using many calculations on this number. However, it’s good for storing large decimal or floating-point numbers.
