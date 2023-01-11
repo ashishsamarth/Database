@@ -12,38 +12,53 @@ If substring is NULL, then the INSTR function will return NULL
 
 Example:
 
-SELECT CUST_STREET_ADDRESS,
-INSTR(CUST_STREET_ADDRESS, 'North', 1,1) as "Start_Position_of_String"
-FROM Customers
-WHERE 1=1;
+SELECT '27 East Braxton Boulevard' AS ADDRESS, INSTR('27 East Braxton Boulevard', 'B') AS STRING_POS_FIRST_OCCURENCE FROM DUAL;
+/*
+--Getting the first occurence of letter 'B'
+ADDRESS                     STRING_POS_FIRST_OCCURENCE
+27 EAST BRAXTON BOULEVARD	9
+*/
 
-Output:
-CUST_STREET_ADDRESS     Start_Position_of_String
-27 North Sagadahoc Boulevard	4
-37 West Geneva Street	0
-47 Toa Alta Road	0
-47 South Kanabec Road	0
-57 North 3rd Drive	4
-67 East Mcintosh Avenue	0
-77 Bradford Avenue	0
-77 North Packard Avenue	4
-87 West Coshocton Avenue	0
-97 Sagadahoc Avenue	0
-97 South Geneva Avenue	0
-107 Covington Avenue	0
-107 North Saguache Avenue	5
+SELECT '27 East Braxton Boulevard' AS ADDRESS, INSTR('27 East Braxton Boulevard', 'B', 1) AS STRING_POS_FIRST_OCCURENCE FROM DUAL;
+/*
+--Getting the first occurence of letter 'B', starting from letter, at the 1st index of the sentence
+ADDRESS                     STRING_POS_FIRST_OCCURENCE
+27 EAST BRAXTON BOULEVARD	9
+*/
 
-SELECT CUST_STREET_ADDRESS,
-INSTR(CUST_STREET_ADDRESS, NULL, 1,1) as "Start_Position_of_String"
-FROM Customers
-WHERE 1=1;
+SELECT '27 East Braxton Boulevard' AS ADDRESS, INSTR('27 East Braxton Boulevard', 'B', 1,1) AS STRING_POS_FIRST_OCCURENCE FROM DUAL;
+/*
+--Getting the first occurence of letter 'B', starting from letter, at the 1st index of the sentence
+ADDRESS                     STRING_POS_FIRST_OCCURENCE
+27 EAST BRAXTON BOULEVARD	9
+*/
 
-Output:
-CUST_STREET_ADDRESS             Start_Position_of_String
-27 North Sagadahoc Boulevard    null	
-37 West Geneva Street	        null
-47 Toa Alta Road	            null
-47 South Kanabec Road	        null
-57 North 3rd Drive	            null
-67 East Mcintosh Avenue	        null
-77 Bradford Avenue	            null
+SELECT '27 East Braxton Boulevard' AS ADDRESS, INSTR('27 East Braxton Boulevard', 'B', 1,2) AS STRING_POS_SECOND_OCCURENCE FROM DUAL;
+/*
+--Getting the second occurence of letter 'B', starting from letter, at the 1st index of the sentence
+ADDRESS                     STRING_POS_SECOND_OCCURENCE
+27 EAST BRAXTON BOULEVARD	17
+*/
+
+SELECT '27 East Braxton Boulevard' AS ADDRESS, INSTR('27 East Braxton Boulevard', 'B', 8,1) AS STRING_POS_FIRST_OCCURENCE FROM DUAL;
+/*
+--Getting the first occurence of letter 'B', starting from letter, at the 8th index of the sentence
+ADDRESS                     STRING_POS_FIRST_OCCURENCE
+27 EAST BRAXTON BOULEVARD	9
+*/
+
+
+SELECT '27 East Braxton Boulevard' AS ADDRESS, INSTR('27 East Braxton Boulevard', 'B', 9,1) AS STRING_POS_FIRST_OCCURENCE FROM DUAL;
+/*
+--Getting the first occurence of letter 'B', starting from letter, at the 9th index of the sentence
+ADDRESS                     STRING_POS_FIRST_OCCURENCE
+27 EAST BRAXTON BOULEVARD	9
+*/
+
+
+SELECT '27 East Braxton Boulevard' AS ADDRESS, INSTR('27 East Braxton Boulevard', 'B', 10,1) AS STRING_POS_FIRST_OCCURENCE FROM DUAL;
+/*
+--Getting the first occurence of letter 'B', starting from letter, at the 10th index of the sentence
+ADDRESS                     STRING_POS_FIRST_OCCURENCE
+27 EAST BRAXTON BOULEVARD	17
+*/
