@@ -18,14 +18,20 @@ FROM Customers
 WHERE 1=1;
 
 Output:
-CUST_STREET_ADDRESS             Start_Position_of_String
+CUST_STREET_ADDRESS     Start_Position_of_String
 27 North Sagadahoc Boulevard	4
-47 South Kanabec Road   0
-57 North 3rd Drive  4
-67 East Mcintosh Avenue 0
-107 North Saguache Avenue   5
-117 West Gloucester Avenue  0
-
+37 West Geneva Street	0
+47 Toa Alta Road	0
+47 South Kanabec Road	0
+57 North 3rd Drive	4
+67 East Mcintosh Avenue	0
+77 Bradford Avenue	0
+77 North Packard Avenue	4
+87 West Coshocton Avenue	0
+97 Sagadahoc Avenue	0
+97 South Geneva Avenue	0
+107 Covington Avenue	0
+107 North Saguache Avenue	5
 
 SELECT CUST_STREET_ADDRESS,
 INSTR(CUST_STREET_ADDRESS, NULL, 1,1) as "Start_Position_of_String"
