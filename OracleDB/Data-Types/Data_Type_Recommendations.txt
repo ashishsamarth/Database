@@ -1,0 +1,9 @@
+• Don’t use LONG or LONG RAW, as these are deprecated. Use BLOB or CLOB instead.
+
+• VARCHAR2 can be used instead of CHAR.
+
+• NUMBER should be used instead of INTEGER, FLOAT, or DECIMAL.
+
+• Consider the advantages and disadvantages of the binary number types, to decide whether or not BINARY_FLOAT or NUMBER should be used.
+
+• Always specify the size or precision. Most data types allow you to specify this but have a default value.
