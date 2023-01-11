@@ -1,0 +1,2 @@
+CLOB data type stands for “character large object.” It’s similar to BLOB, but unlike BLOB it stores character data and not binary data.
+It also has a maximum size of 4GB. It’s useful for storing large character values, but if you want to store images or audio or other files, then a BLOB would be used
