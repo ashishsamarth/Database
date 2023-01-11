@@ -4,7 +4,7 @@ This data type stores data in a fixed length, which means the value takes up the
 regardless of the actual value being stored.
 
 When specifycing a CHAR column, you need to specify a length value. This represents the number of 
-characters to store in the field and must be between 1 and 2000
+characters to store in the field and must be between 1 and 2000 or (2KB)
 
 Important Note:
 1.  Values that are less than the length you define have space characters added to the right of the value to meet the length
