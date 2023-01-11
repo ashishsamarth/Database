@@ -1,0 +1,43 @@
+INSTR function returns the location of a substring in a string
+
+Return_Value_Type: Numeric
+Syntax: INSTR( string, substring [, start_position [, th_appearance ] ] )
+
+Returns:
+The INSTR function returns a numeric value. The first position in the string is 1.
+If substring is not found in string, then the INSTR function will return 0.
+If string is NULL, then the INSTR function will return NULL.
+If substring is NULL, then the INSTR function will return NULL
+
+
+Example:
+
+SELECT CUST_STREET_ADDRESS,
+INSTR(CUST_STREET_ADDRESS, 'North', 1,1) as "Start_Position_of_String"
+FROM Customers
+WHERE 1=1;
+
+Output:
+CUST_STREET_ADDRESS             Start_Position_of_String
+27 North Sagadahoc Boulevard	4
+47 South Kanabec Road	        0
+57 North 3rd Drive	            4
+67 East Mcintosh Avenue	        0
+107 North Saguache Avenue	    5
+117 West Gloucester Avenue	    0
+
+
+SELECT CUST_STREET_ADDRESS,
+INSTR(CUST_STREET_ADDRESS, NULL, 1,1) as "Start_Position_of_String"
+FROM Customers
+WHERE 1=1;
+
+Output:
+CUST_STREET_ADDRESS             Start_Position_of_String
+27 North Sagadahoc Boulevard    null	
+37 West Geneva Street	        null
+47 Toa Alta Road	            null
+47 South Kanabec Road	        null
+57 North 3rd Drive	            null
+67 East Mcintosh Avenue	        null
+77 Bradford Avenue	            null
