@@ -1,0 +1,5 @@
+NVARCHAR2 is the Unicode version of VARCHAR2. Just like the NCHAR data type, it allows for Unicode 
+characters to be stored, but it uses the variable-length concept of VARCHAR2, which means you can 
+store the value you want without having to add extra space characters to it
+
+How to Define: NVARCHAR2(50) , here the number is the length of the string to be stored
