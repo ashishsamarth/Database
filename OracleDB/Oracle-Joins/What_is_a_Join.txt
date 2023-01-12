@@ -1,0 +1,87 @@
+A join is a feature of SQL that allows you to view the columns from two or more tables in a single query. Data in a database is stored in separate tables, where each table stores a certain type of information. A join allows you to write a query that gets information from two or more tables and view the columns in a single set of results. Joins are often written in SELECT queries, but can also be done in other queries such as an UPDATE.
+
+In SQL, you can add a join by specifying a keyword in your query. There are several different types of joins, each of which has their own keyword
+A join in SQL involves a few things
+a.  More than one table OR (The same table multiple times in cases of self join)
+b.  A JOIN keyword
+c.  Conditions that specify how the two tables are joined
+
+For example:
+
+Select emp.employee_id,
+Dept.Department_Name 
+from employees emp Join departments dept
+on emp.department_id=dept.department_id;
+
+/*
+
+200	Administration
+201	Marketing
+202	Marketing
+114	Purchasing
+115	Purchasing
+116	Purchasing
+117	Purchasing
+118	Purchasing
+119	Purchasing
+
+*/
+
+Another way of writing the same join is by utilizing the keyword 'USING', instead of with the 'ON' keyword however this has some limitations as listed below
+a.  The column name used for the join, MUST Exist and have the exact same name in both the tables.
+b.  The columns selected for the join, CAN be a part of the select columns, but without the alias name
+
+Select emp.employee_id,
+Dept.Department_Name
+from employees emp Join Departments dept 
+using(department_id);
+
+/*
+200	Administration
+201	Marketing
+202	Marketing
+114	Purchasing
+115	Purchasing
+116	Purchasing
+117	Purchasing
+118	Purchasing
+119	Purchasing
+*/
+
+If we execute the following,
+
+Select emp.employee_id, dept.department_id, Dept.Department_Name
+from employees emp Join Departments dept 
+using(department_id);
+
+/*
+--The 'department_id' column selected as a part of select section, has an alias of dept
+
+This will fail with the following error:
+ORA-25154: column part of USING clause cannot have qualifier
+25154. 00000 -  "column part of USING clause cannot have qualifier"
+*Cause:    Columns that are used for a named-join (either a NATURAL join
+           or a join with a USING clause) cannot have an explicit qualifier.
+*Action:   Remove the qualifier.
+*/
+
+However, if we execute the following,
+
+Select emp.employee_id, department_id, Dept.Department_Name
+from employees emp Join Departments dept 
+using(department_id);
+
+/*
+This will return the rows successfully, since we did not use the alias 'dept' for column 'department_id' which is also used as the column to join the tables
+
+200	10	Administration
+201	20	Marketing
+202	20	Marketing
+114	30	Purchasing
+115	30	Purchasing
+116	30	Purchasing
+117	30	Purchasing
+118	30	Purchasing
+119	30	Purchasing
+
+*/
