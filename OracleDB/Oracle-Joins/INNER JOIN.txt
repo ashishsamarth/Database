@@ -1,0 +1,64 @@
+An inner join only returns results that match in both tables. Your SELECT query can use INNER JOIN keyword instead of the JOIN keyword
+so, following queries, will return the exact same result.
+
+Example:
+
+Select emp.employee_id,
+Dept.Department_Name 
+from employees emp JOIN departments dept
+on emp.department_id=dept.department_id;
+
+/*
+
+200	Administration
+201	Marketing
+202	Marketing
+114	Purchasing
+115	Purchasing
+116	Purchasing
+117	Purchasing
+118	Purchasing
+119	Purchasing
+
+*/
+
+
+Select emp.employee_id,
+Dept.Department_Name 
+from employees emp INNER JOIN departments dept
+on emp.department_id=dept.department_id;
+
+/*
+
+200	Administration
+201	Marketing
+202	Marketing
+114	Purchasing
+115	Purchasing
+116	Purchasing
+117	Purchasing
+118	Purchasing
+119	Purchasing
+
+*/
+
+
+
+Select emp.employee_id,
+Dept.Department_Name 
+from employees emp INNER JOIN departments dept
+USING(department_id);  
+
+/*
+
+200	Administration
+201	Marketing
+202	Marketing
+114	Purchasing
+115	Purchasing
+116	Purchasing
+117	Purchasing
+118	Purchasing
+119	Purchasing
+
+*/
