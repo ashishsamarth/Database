@@ -62,6 +62,7 @@
     export ORA_INVENTORY=/u01/app/oraInventory
     export ORACLE_SID=cdb19c
     export PDB_NAME=samarth_db_sandbox
+    export TNS_ADMIN=$ORACLE_HOME/network/admin
     export DATA_DIR=/u02/oradata
     export PATH=/usr/sbin:/usr/local/bin:$PATH
     export PATH=$ORACLE_HOME/bin:$PATH
@@ -139,6 +140,11 @@
 
 13. The product is installed, now its time to create a database.
     As a 'oracle' user, execute the following
+
+    a.  Firstly, run the following command, to update the port & host for listener and service name Configurations
+        netmgr
+
+        # Once the listener and service name configurations are update and saved, when the following commands are executed, it will take reference from listener.ora and tnsnames.ora under $TNS_ADMIN
 
     a.  To start the listener
         lsnrctl start
