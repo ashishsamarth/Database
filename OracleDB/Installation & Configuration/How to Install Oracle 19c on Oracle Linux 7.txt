@@ -74,22 +74,59 @@
 
     # Contents of start_db.sh
     #!/bin/bash
+    export TMP=/tmp
+    export TMPDIR=$TMP
 
-    export ORAENV_ASK=NO
+    export ORACLE_HOSTNAME=ol7
+    export ORACLE_UNQNAME=cdb19c
+    export ORACLE_BASE=/u01/app/oracle
+    export ORACLE_HOME=$ORACLE_BASE/product/db/19.0.0/dbhome_1
+    export ORA_INVENTORY=/u01/app/oraInventory
+    export ORACLE_SID=cdb19c
+    export PDB_NAME=samarth_db_sandbox
+
+    ORAENV_ASK=NO
     . oraenv
-    export ORAENV_ASK=YES
+    ORAENV_ASK=YES
 
-    dbstart $ORACLE_HOME
+    # Start Listener
+    lsnrctl start
+
+    # Start Database
+    sqlplus / as sysdba << EOF
+
+    STARTUP;
+    EXIT;
+    EOF
 
 
     # Contents of stop_db.sh
     #!/bin/bash
+    export TMP=/tmp
+    export TMPDIR=$TMP
+
+    export ORACLE_HOSTNAME=vmboxol79odb21c
+    export ORACLE_UNQNAME=cdb1
+    export ORACLE_BASE=/u01/app/oracle
+    export ORACLE_HOME=$ORACLE_BASE/product/db/21.3.0/dbhome_1
+    export ORA_INVENTORY=/u01/app/oraInventory
+    export ORACLE_SID=orclcdb21c
+    export PDB_NAME=orclpdb21c
 
     export ORAENV_ASK=NO
     . oraenv
     export ORAENV_ASK=YES
 
-    dbshut $ORACLE_HOME
+    # Start Database
+    sqlplus / as sysdba << EOF
+
+    SHUTDOWN IMMEDIATE;
+    EXIT;
+    EOF
+
+    # Stop Listener
+    lsnrctl stop
+
 
     Assign execute permissions to the startup and shutdown scripts
     
