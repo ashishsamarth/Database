@@ -117,7 +117,7 @@
     . oraenv
     export ORAENV_ASK=YES
 
-    # Start Database
+    # Stop Database
     sqlplus / as sysdba << EOF
 
     SHUTDOWN IMMEDIATE;
