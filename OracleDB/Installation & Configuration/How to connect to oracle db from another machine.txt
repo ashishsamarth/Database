@@ -6,7 +6,7 @@ To open a specific port in Oracle Linux 7
         firewall-cmd --permanent --add-port=1521/tcp
 
 2.  As a 'root' user, execute the following
-        firewall-cmd --reload
+        firewall-cmd --complete-reload
 
 This will ensure that the specific port is opened, and firewalld changes have taken effect.
 
