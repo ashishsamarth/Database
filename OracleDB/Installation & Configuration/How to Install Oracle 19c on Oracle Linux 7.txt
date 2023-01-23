@@ -60,8 +60,8 @@
     export ORACLE_BASE=/u01/app/oracle
     export ORACLE_HOME=$ORACLE_BASE/product/db/19.0.0/dbhome_1
     export ORA_INVENTORY=/u01/app/oraInventory
-    export ORACLE_SID=cdb19c
-    export PDB_NAME=samarth_db_sandbox
+    export ORACLE_SID=orclcdb21c
+    export PDB_NAME=orclpdb21c
     export TNS_ADMIN=$ORACLE_HOME/network/admin
     export DATA_DIR=/u02/oradata
     export PATH=/usr/sbin:/usr/local/bin:$PATH
@@ -82,8 +82,8 @@
     export ORACLE_BASE=/u01/app/oracle
     export ORACLE_HOME=$ORACLE_BASE/product/db/19.0.0/dbhome_1
     export ORA_INVENTORY=/u01/app/oraInventory
-    export ORACLE_SID=cdb19c
-    export PDB_NAME=samarth_db_sandbox
+    export ORACLE_SID=orclcdb21c
+    export PDB_NAME=orclpdb21c
 
     ORAENV_ASK=NO
     . oraenv
@@ -108,7 +108,7 @@
     export ORACLE_HOSTNAME=$HOSTNAME
     export ORACLE_UNQNAME=cdb1
     export ORACLE_BASE=/u01/app/oracle
-    export ORACLE_HOME=$ORACLE_BASE/product/db/21.3.0/dbhome_1
+    export ORACLE_HOME=$ORACLE_BASE/product/db/19.0.0/dbhome_1
     export ORA_INVENTORY=/u01/app/oraInventory
     export ORACLE_SID=orclcdb21c
     export PDB_NAME=orclpdb21c
