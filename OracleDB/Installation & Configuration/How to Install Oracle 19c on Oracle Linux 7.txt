@@ -223,15 +223,15 @@
             show con_name;
     
     c.  If you are connected to CDB, then change the session to PDB
-            alter session set container=samarth_db_sandbox;
+            alter session set container=orclpdb21c;
     
     d.  Once the above statement is executed successfully, check if you are connected to PDB now.
             show con_name;
     
     e.  If the PDB is open, the following statement will throw an error, if its closed, then the statement will open the PDB
-            ALTER PLUGGABLE DATABASE samarth_db_sandbox OPEN;
+            ALTER PLUGGABLE DATABASE orclpdb21c OPEN;
             COMMIT;
 
     f.  Save the opened state of PDB
-            ALTER PLUGGABLE DATABASE samarth_db_sandbox SAVE STATE;
+            ALTER PLUGGABLE DATABASE orclpdb21c SAVE STATE;
             COMMIT;
