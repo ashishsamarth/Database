@@ -1,7 +1,7 @@
 #!/bin/bash
 export TMP=/tmp
 export TMPDIR=$TMP
-export ORACLE_HOSTNAME=ol7
+export ORACLE_HOSTNAME=$HOSTNAME
 export ORACLE_UNQNAME=cdb19c
 export ORACLE_BASE=/u01/app/oracle
 export ORACLE_HOME=$ORACLE_BASE/product/db/19.0.0/dbhome_1
