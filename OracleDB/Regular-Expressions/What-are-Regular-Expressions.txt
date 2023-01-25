@@ -1,0 +1,7 @@
+Regular expressions are patterns used to match character combinations in strings. Oracle 10g introduced support for regular expressions using different functions
+Following are few major regular expressions
+
+1.  REGEXP_LIKE
+2.  REGEXP_SUBSTR
+3.  REGEXP_INSTR
+4.  REGEXP_COUNT
