@@ -6,3 +6,48 @@ Syntax:
 a.  string expression – the string expression.
 b.  pattern – the regular expression matching pattern
 c.  match parameter – lets you to change the default matching behaviour of the Oracle REGEXP_LIKE function (for example, change the search from case sensitive to case insensitive).
+
+A regular statement to match rows having 'CD-ROM' will look like the Following
+
+SELECT
+    prod_desc
+FROM
+    products
+WHERE
+    1 = 1
+AND prod_desc like '%CD-ROM%';
+
+/*
+Output
+
+External 6X CD-ROM
+External 8X CD-ROM
+Envoy External 6X CD-ROM
+Envoy External 8X CD-ROM
+Internal 6X CD-ROM
+Internal 8X CD-ROM
+
+*/
+
+The same can be written using a regular expression as
+
+SELECT
+    prod_desc
+FROM
+    products
+WHERE
+    1 = 1
+    AND REGEXP_LIKE ( prod_desc,
+                      'CD-ROM' );
+
+/*
+Output
+
+External 6X CD-ROM
+External 8X CD-ROM
+Envoy External 6X CD-ROM
+Envoy External 8X CD-ROM
+Internal 6X CD-ROM
+Internal 8X CD-ROM
+
+*/
