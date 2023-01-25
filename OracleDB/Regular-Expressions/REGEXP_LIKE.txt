@@ -97,6 +97,44 @@ Internal 8X CD-ROM
 
 The REGEXP_LIKE returned an output having keywords CD-ROM and External, irrespective of, if they are present in the same row as a part of the record using the '|' (pipe).
 This is similar to egrep in BASH
+
+-- Performing keyword search using square brackets
+SELECT
+    prod_desc
+FROM
+    products
+WHERE
+    1 = 1
+    AND REGEXP_LIKE ( prod_desc,
+                      '[,"]' );
+
+--Here we are searching for records, which have either a ',' or a " in the row
+--Square Brackets indicate, both individual patterns to be searched
+
+/*
+17" LCD w/built-in HDTV Tuner
+Mini DV Camcorder with 3.5" Swivel LCD
+18" Flat Panel Graphics Monitor
+Multimedia speakers- 3" cones
+1.44MB External 3.5" Diskette
+Multimedia speakers- 5" cones
+CD-R Mini Discs with Jewel Case, 185MB, Pack of 5
+Music CD-R with Spindle, 700MB, Pack of 30
+CD-RW, High Speed, Pack of 10
+CD-RW, High Speed 650MB/74 Minutes, Pack of 5
+CD-R, Professional Grade, Pack of 10
+OraMusic CD-R, Pack of 10
+CD-R with Jewel Cases, 700MB/80 Minutes, Pack of 12
+DVD-R Disc with Jewel Case, 4.7 GB
+DVD-RAM Media, with Jewel Case, Double-Sided, 9.4GB
+DVD-R Discs, 4.7GB, Pack of 5
+DVD-R Discs, 4.7GB, Pack of 5
+DVD-RW Discs, 4.7GB, Pack of 3
+3 1/2" Bulk diskettes, Box of 50
+3 1/2" Bulk diskettes, Box of 100
+*/
+
+
 -----------------------------------------------------------------------------------------------------
 
 
@@ -186,3 +224,5 @@ Multimedia speakers- 5" cones
 256MB Memory Card
 */
 -----------------------------------------------------------------------------------------------------
+
+
