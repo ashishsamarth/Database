@@ -189,6 +189,43 @@ WHERE
 -- Here we are performing a case insensitive search for 'W' or 'w' or x or 'X' or 'y'  or 'Y' or 'z' or 'Z'
 -- Note: Negative Range doesn't work with this approach {REGEXP_LIKE ( prod_desc, '[z-w]', 'i' ) will fail}
 
+*********************************
+
+-- Performing keyword search using square brackets
+SELECT
+    prod_desc
+FROM
+    products
+WHERE
+    1 = 1
+    AND REGEXP_LIKE ( prod_desc,
+                      '[m-p]o', 'i' );
+
+-- Here we are performing a case insensitive search for 'm' or 'M', 'n' or 'N', 'o' or 'O', 'p' or 'P' - followed by an 'o' or 'O'
+
+/*
+18" Flat Panel Graphics Monitor
+PCMCIA modem/fax 28800 baud
+Mouse Pad
+PCMCIA modem/fax 19200 baud
+Standard Mouse
+Deluxe Mouse
+Model CD13272 Tricolor Ink Cartridge
+Model SM26273 Black Ink Cartridge
+Model NM500X High Yield Toner Cartridge
+Model A3827H Black Image Cartridge
+Model K3822L Cordless Phone Battery
+Model C9827B Cordless Phone Battery
+Model K8822S Cordless Phone Battery
+Model C93822D Wireless Phone Battery
+Model S27273M Extended Use Wireless Phone Battery
+64MB Memory Card
+128MB Memory Card
+256MB Memory Card
+Comic Book Heroes
+Xtend Memory
+*/
+
 
 -----------------------------------------------------------------------------------------------------
 
