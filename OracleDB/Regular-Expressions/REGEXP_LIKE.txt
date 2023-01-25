@@ -98,6 +98,7 @@ Internal 8X CD-ROM
 The REGEXP_LIKE returned an output having keywords CD-ROM and External, irrespective of, if they are present in the same row as a part of the record using the '|' (pipe).
 This is similar to egrep in BASH
 
+*********************************
 
 -- Performing keyword search using square brackets
 SELECT
@@ -136,6 +137,8 @@ DVD-RW Discs, 4.7GB, Pack of 3
 */
 
 The same search can be extented to alphabets and numbers are well
+
+*********************************
 
 -- Performing keyword search using square brackets
 SELECT
