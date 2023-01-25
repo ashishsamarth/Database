@@ -98,6 +98,7 @@ Internal 8X CD-ROM
 The REGEXP_LIKE returned an output having keywords CD-ROM and External, irrespective of, if they are present in the same row as a part of the record using the '|' (pipe).
 This is similar to egrep in BASH
 
+
 -- Performing keyword search using square brackets
 SELECT
     prod_desc
@@ -134,6 +135,41 @@ DVD-RW Discs, 4.7GB, Pack of 3
 3 1/2" Bulk diskettes, Box of 100
 */
 
+The same search can be extented to alphabets and numbers are well
+
+-- Performing keyword search using square brackets
+SELECT
+    prod_desc
+FROM
+    products
+WHERE
+    1 = 1
+    AND REGEXP_LIKE ( prod_desc,
+                      '[Z9w]', 'i' );
+
+-- Here we are performing a case insensitive search for 'z' or 'Z' or 9 or 'w' or 'W'
+
+/*
+17" LCD w/built-in HDTV Tuner
+Mini DV Camcorder with 3.5" Swivel LCD
+Home Theatre Package with DVD-Audio/Video Play
+Unix/Windows 1-user pack
+8.3 Minitower Speaker
+PCMCIA modem/fax 19200 baud
+Keyboard Wrist Rest
+CD-R Mini Discs with Jewel Case, 185MB, Pack of 5
+Music CD-R with Spindle, 700MB, Pack of 30
+CD-RW, High Speed, Pack of 10
+CD-RW, High Speed 650MB/74 Minutes, Pack of 5
+CD-R with Jewel Cases, 700MB/80 Minutes, Pack of 12
+DVD-R Disc with Jewel Case, 4.7 GB
+DVD-RAM Media, with Jewel Case, Double-Sided, 9.4GB
+DVD-RW Discs, 4.7GB, Pack of 3
+Model C9827B Cordless Phone Battery
+Model C93822D Wireless Phone Battery
+Model S27273M Extended Use Wireless Phone Battery
+Adventures with Numbers
+*/
 
 -----------------------------------------------------------------------------------------------------
 
