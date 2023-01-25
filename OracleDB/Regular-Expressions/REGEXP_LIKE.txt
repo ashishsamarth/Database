@@ -53,6 +53,8 @@ Internal 8X CD-ROM
 */
 
 Their seems to be no difference in output.
+-----------------------------------------------------------------------------------------------------
+
 Here's another variation where LIKE will fail, but REGEXP_LIKE will not
 
 The limitation with like is, if you want to search a row with keyword(s), the keywords in the clause, must be written in the same order as they are present in the row.
@@ -95,6 +97,12 @@ Internal 8X CD-ROM
 
 The REGEXP_LIKE returned an output having keywords CD-ROM and External, irrespective of, if they are present in the same row as a part of the record using the '|' (pipe).
 This is similar to egrep in BASH
+-----------------------------------------------------------------------------------------------------
+
+
+
+
+-----------------------------------------------------------------------------------------------------
 
 -- Performing Case Sensitive Search
 SELECT
@@ -111,6 +119,7 @@ WHERE
 No Rows returned
 */
 
+-----------------------------------------------------------------------------------------------------
 -- Performing Case IN-Sensitive Search
 SELECT
     prod_desc
@@ -131,6 +140,7 @@ External 8X CD-ROM
 Envoy External 6X CD-ROM
 Envoy External 8X CD-ROM
 */
+-----------------------------------------------------------------------------------------------------
 
 -- Performing search as 'Starting with' using Caret Operator (^)
 SELECT
@@ -151,6 +161,7 @@ Envoy External Keyboard
 Envoy External 6X CD-ROM
 Envoy External 8X CD-ROM
 */
+-----------------------------------------------------------------------------------------------------
 
 -- Performing search as 'Ending with' using Dollar Operator ($)
 SELECT
@@ -174,3 +185,4 @@ Multimedia speakers- 5" cones
 128MB Memory Card
 256MB Memory Card
 */
+-----------------------------------------------------------------------------------------------------
