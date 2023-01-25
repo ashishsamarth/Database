@@ -266,10 +266,30 @@ WHERE
 Deluxe Mouse
 */
 
------------------------------------------------------------------------------------------------------
+*********************************
 
+-- Performing keyword search using {} curly brackets
+SELECT
+    prod_desc
+FROM
+    products
+WHERE
+    1 = 1
+    AND REGEXP_LIKE ( prod_desc,
+                      '[t]{2}');
 
+-- Here we are performing a case sensitive search for 't' which appears consecutively twice in the row
 
+/*
+1.44MB External 3.5" Diskette
+3 1/2" Bulk diskettes, Box of 50
+3 1/2" Bulk diskettes, Box of 100
+Model K3822L Cordless Phone Battery
+Model C9827B Cordless Phone Battery
+Model K8822S Cordless Phone Battery
+Model C93822D Wireless Phone Battery
+Model S27273M Extended Use Wireless Phone Battery
+*/
 
 -----------------------------------------------------------------------------------------------------
 
