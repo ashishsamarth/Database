@@ -51,3 +51,8 @@ Internal 6X CD-ROM
 Internal 8X CD-ROM
 
 */
+
+Their seems to be no difference in output.
+Here's another variation where LIKE will fail, but REGEXP_LIKE will not
+
+The limitation with like is, if you want to search a row with keyword(s), the keywords in the clause, must be written in the same order as they are present in the row.
