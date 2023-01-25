@@ -151,3 +151,26 @@ Envoy External Keyboard
 Envoy External 6X CD-ROM
 Envoy External 8X CD-ROM
 */
+
+-- Performing search as 'Ending with' using Dollar Operator ($)
+SELECT
+    prod_desc
+FROM
+    products
+WHERE
+    1 = 1
+    AND REGEXP_LIKE ( prod_desc,
+                      'card$|cones$', 'i' );
+-- 'i' is at the third parameter and it indicates that the user wants to perform a 'Case IN-Sensitive Search'
+-- $ operator before the search value indicates to filter rows only ending with the keyword
+-- | operator indicates two keywords to be searched for
+
+/*
+SIMM- 8MB PCMCIAII card
+SIMM- 16MB PCMCIAII card
+Multimedia speakers- 3" cones
+Multimedia speakers- 5" cones
+64MB Memory Card
+128MB Memory Card
+256MB Memory Card
+*/
