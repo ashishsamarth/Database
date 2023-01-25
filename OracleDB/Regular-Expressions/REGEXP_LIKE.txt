@@ -111,3 +111,23 @@ WHERE
 No Rows returned
 */
 
+-- Performing Case IN-Sensitive Search
+SELECT
+    prod_desc
+FROM
+    products
+WHERE
+    1 = 1
+    AND REGEXP_LIKE ( prod_desc,
+                      'EXTERNAL', 'i' );
+-- 'i' is at the third parameter and it indicates that the user wants to perform a 'Case IN-Sensitive Search'
+
+/*
+Envoy External Keyboard
+External 101-key keyboard
+1.44MB External 3.5" Diskette
+External 6X CD-ROM
+External 8X CD-ROM
+Envoy External 6X CD-ROM
+Envoy External 8X CD-ROM
+*/
