@@ -95,3 +95,19 @@ Internal 8X CD-ROM
 
 The REGEXP_LIKE returned an output having keywords CD-ROM and External, irrespective of, if they are present in the same row as a part of the record using the '|' (pipe).
 This is similar to egrep in BASH
+
+-- Performing Case Sensitive Search
+SELECT
+    prod_desc
+FROM
+    products
+WHERE
+    1 = 1
+    AND REGEXP_LIKE ( prod_desc,
+                      'EXTERNAL', 'c' );
+-- 'c' is at the third parameter and it indicates that the user wants to perform a 'Case Sensitive Search'
+
+/*
+No Rows returned
+*/
+
