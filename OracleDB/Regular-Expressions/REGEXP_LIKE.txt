@@ -1,0 +1,8 @@
+Oracle REGEXP_LIKE is used to perform a regular expression matching (rather than a simple pattern matching performed by LIKE)
+
+Syntax:
+    REGEXP_LIKE ( string expression, pattern [, matching parameter ] )
+
+a.  string expression – the string expression.
+b.  pattern – the regular expression matching pattern
+c.  match parameter – lets you to change the default matching behaviour of the Oracle REGEXP_LIKE function (for example, change the search from case sensitive to case insensitive).
