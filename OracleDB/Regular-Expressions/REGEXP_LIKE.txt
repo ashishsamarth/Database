@@ -81,3 +81,17 @@ WHERE
     AND REGEXP_LIKE ( prod_desc,
                       'CD-ROM|External' );
 
+/*
+Envoy External Keyboard
+External 101-key keyboard
+1.44MB External 3.5" Diskette
+External 6X CD-ROM
+External 8X CD-ROM
+Envoy External 6X CD-ROM
+Envoy External 8X CD-ROM
+Internal 6X CD-ROM
+Internal 8X CD-ROM
+*/
+
+The REGEXP_LIKE returned an output having keywords CD-ROM and External, irrespective of, if they are present in the same row as a part of the record using the '|' (pipe).
+This is similar to egrep in BASH
