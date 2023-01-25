@@ -131,3 +131,23 @@ External 8X CD-ROM
 Envoy External 6X CD-ROM
 Envoy External 8X CD-ROM
 */
+
+-- Performing search as 'Starting with' using Caret Operator (^)
+SELECT
+    prod_desc
+FROM
+    products
+WHERE
+    1 = 1
+    AND REGEXP_LIKE ( prod_desc,
+                      '^ENVOY', 'i' );
+-- 'i' is at the third parameter and it indicates that the user wants to perform a 'Case IN-Sensitive Search'
+-- ^ operator before the search value indicates to filter rows only starting with the keyword
+
+/*
+Envoy 256MB - 40Gb
+Envoy Ambassador
+Envoy External Keyboard
+Envoy External 6X CD-ROM
+Envoy External 8X CD-ROM
+*/
