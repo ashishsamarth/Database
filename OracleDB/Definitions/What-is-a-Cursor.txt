@@ -1,0 +1,3 @@
+A database cursor is a control that allows you to navigate around a table’s rows or documents. 
+It can be referred to as a pointer for a row in a set of rows. 
+Cursors are extremely useful for database traversal operations such as extraction, insertion, and elimination
