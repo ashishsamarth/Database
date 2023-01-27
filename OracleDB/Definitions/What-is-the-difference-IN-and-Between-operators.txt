@@ -1,0 +1,6 @@
+The BETWEEN operator is used to represent rows based on a set of values. 
+The values may be numbers, text, or dates. The BETWEEN operator returns the total number of values that 
+exist between two specified ranges.
+
+The IN condition operator is used to search for values within a given range of values. 
+If we have more than one value to choose from, then we use the IN operator.
