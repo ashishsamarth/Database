@@ -5,3 +5,4 @@ Following are few major regular expressions
 2.  REGEXP_SUBSTR
 3.  REGEXP_INSTR
 4.  REGEXP_COUNT
+5.  REGEXP_REPLACE
