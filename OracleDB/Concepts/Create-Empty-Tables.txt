@@ -1,0 +1,10 @@
+How can you create empty tables with the same structure as another table?
+
+This can be achieved by fetching the records of one table into a new table using the INTO operator while 
+fixing a WHERE clause to be false for all records. 
+In this way, SQL prepares the new table with a duplicate structure to accept the fetched records. 
+However, there are no records that will get fetched due to the WHERE clause in action. 
+Therefore, nothing is inserted into the new table, thus creating an empty table
+
+SELECT * INTO Students_copy
+FROM Students WHERE 1 = 2;
