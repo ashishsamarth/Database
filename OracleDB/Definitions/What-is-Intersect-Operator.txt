@@ -1,0 +1,5 @@
+The INTERSECT operator helps combine two select statements and returns only those records that are common 
+to both the select statements. 
+So, after we get Table A and Table B over here, and if we apply the INTERSECT operator on these two tables,
+ then we will get only those records that are common to the result of the select statements of these two 
+tables.
