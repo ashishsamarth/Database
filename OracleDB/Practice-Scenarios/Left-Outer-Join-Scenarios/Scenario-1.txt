@@ -29,6 +29,7 @@ FROM
 WHERE
     1 = 1
     ORDER BY B.FIRST_NAME NULLS FIRST;
+    
 /*
 Output
 
