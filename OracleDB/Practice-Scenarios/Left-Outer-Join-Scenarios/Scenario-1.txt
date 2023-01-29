@@ -12,6 +12,11 @@ Employee_id First_Name Last_Name    Email       Phone_Number    Hire_Date Job_id
 Write a query to return Employee_id, First_Name, Last_Name, Manager_id and Manager_Name
 -- Make sure, Steven's row is also shown, since he is the boss with No Manager_id
 
+/*
+This can be achieved via using a left outer join on the same table
+Majority of the conditions would work with an Inner Join, but to pull Steven's row, a Left Outer Join is needed.
+*/
+
 SELECT
     A.EMPLOYEE_ID,
     A.FIRST_NAME,
