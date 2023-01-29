@@ -27,10 +27,10 @@ WHERE
 /*
 Output
 
-Employee_id First_Name Last_Name    Manager_id
+Employee_id First_Name Last_Name    Manager_id  Manager_Name
 100	        Steven	    King		
-130	        Mozhe	    Atkinson	121	Adam
-187	        Anthony	    Cabrio	    121	Adam
+130	        Mozhe	    Atkinson	121	        Adam
+187	        Anthony	    Cabrio	    121	        Adam
 186	        Julia	    Dellinger	121	Adam
 185	        Alexis	    Bull	    121	Adam
 184	        Nandita	    Sarchand	121	Adam
