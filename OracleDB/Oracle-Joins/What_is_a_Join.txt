@@ -1,4 +1,6 @@
-A join is a feature of SQL that allows you to view the columns from two or more tables in a single query. Data in a database is stored in separate tables, where each table stores a certain type of information. A join allows you to write a query that gets information from two or more tables and view the columns in a single set of results. Joins are often written in SELECT queries, but can also be done in other queries such as an UPDATE.
+A join is a feature of SQL that allows you to view the columns from two or more tables in a single query. Data in a database is stored in separate tables, 
+where each table stores a certain type of information. A join allows you to write a query that gets information from two or more tables and view the columns 
+in a single set of results. Joins are often written in SELECT queries, but can also be done in other queries such as an UPDATE.
 
 In SQL, you can add a join by specifying a keyword in your query. There are several different types of joins, each of which has their own keyword
 A join in SQL involves a few things
