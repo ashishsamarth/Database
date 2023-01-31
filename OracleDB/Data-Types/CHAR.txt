@@ -2,11 +2,12 @@ Oracle has a data type called CHAR.
 
 This data type stores data in a fixed length, which means the value takes up the same amount of space regardless of the actual value being stored.
 
-When specifycing a CHAR column, you need to specify a length value. This represents the number of characters to store in the field and must be between 1 and 2000 or (2KB)
+When specifycing a CHAR column, you need to specify a length value. This represents the number of characters to store in the field & must be between 1 & 2000 or (2KB)
 
 Important Note:
 1.  Values that are less than the length you define have space characters added to the right of the value to meet the length (similar approach as LPAD / RPAD)
 
-This means if you store a value of “Oracle” in a CHAR column with a length of 10, the value being  actually stored is “Oracle, along with 4 spaces after the letters to meet the length to 10"
+This means if you store a value of “Oracle” in a CHAR column with a length of 10, the value being  actually stored is “Oracle, along with 4 spaces after the letters 
+to meet the length to 10"
 
 How to Define: Char(10) , here the number is the length of the string to be stored
