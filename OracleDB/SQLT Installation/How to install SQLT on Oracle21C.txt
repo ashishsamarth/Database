@@ -10,7 +10,8 @@ Assumption:- You have downloaded the latest version of SQLT from oracle support 
 4.  Now, connect to database as a sys user
         sqlplus / as sysdba
 
-5.  Initially, I tried to install the SQLT utility without providing the connect parameters, but it failed multiple time, the following is the only way which worked for me
+5.  Initially, I tried to install the SQLT utility without providing the connect parameters, but it failed multiple time, the following is 
+    the only way which worked for me
 
 6.  The installation will need the following parameters
         a.  Connect Identifier of your PDB
