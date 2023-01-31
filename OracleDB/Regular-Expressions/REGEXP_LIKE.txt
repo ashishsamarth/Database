@@ -5,7 +5,8 @@ Syntax:
 
 a.  string expression – the string expression.
 b.  pattern – the regular expression matching pattern
-c.  match parameter – lets you to change the default matching behaviour of the Oracle REGEXP_LIKE function (for example, change the search from case sensitive to case insensitive).
+c.  match parameter – lets you to change the default matching behaviour of the Oracle REGEXP_LIKE function 
+    (for example, change the search from case sensitive to case insensitive).
 
 A regular statement to match rows having 'CD-ROM' will look like the Following
 
@@ -57,7 +58,9 @@ Their seems to be no difference in output.
 
 Here's another variation where LIKE will fail, but REGEXP_LIKE will not
 
-The limitation with like is, if you want to search a row with keyword(s), the keywords in the clause, must be written in the same order as they are present in the row.
+The limitation with like is, if you want to search a row with keyword(s), the keywords in the clause, must be written in the same order 
+as they are present in the row.
+
 But REGEXP_LIKE can handle this with ease.
 
 SELECT
@@ -95,7 +98,8 @@ Internal 6X CD-ROM
 Internal 8X CD-ROM
 */
 
-The REGEXP_LIKE returned an output having keywords CD-ROM and External, irrespective of, if they are present in the same row as a part of the record using the '|' (pipe).
+The REGEXP_LIKE returned an output having keywords CD-ROM and External, irrespective of, if they are present in the same row as a part of the 
+record using the '|' (pipe).
 This is similar to egrep in BASH
 
 *********************************
@@ -239,7 +243,8 @@ WHERE
     AND REGEXP_LIKE ( prod_desc,
                       '[c-e].o', 'i' );
 
--- Here we are performing a case insensitive search for 'c' or 'C', 'd' or 'D', 'e' or 'E' - followed by any character EXCEPT NULL, and again followed by 'o' or 'O'
+-- Here we are performing a case insensitive search for 'c' or 'C', 'd' or 'D', 'e' or 'E' - 
+-- followed by any character EXCEPT NULL, and again followed by 'o' or 'O'
 
 /*
 Home Theatre Package with DVD-Audio/Video Play
@@ -260,7 +265,8 @@ WHERE
     1 = 1
     AND REGEXP_LIKE ( prod_desc,
                       '[c-e]..[x-z]', 'i' );
--- Here we are performing a case insensitive search for 'c' or 'C', 'd' or 'D', 'e' or 'E' - followed by 2 (any) characters EXCEPT NULL, and again followed by 'x' or 'X', 'y' or 'Y', 'z' or 'Z'
+-- Here we are performing a case insensitive search for 'c' or 'C', 'd' or 'D', 'e' or 'E' 
+-- followed by 2 (any) characters EXCEPT NULL, and again followed by 'x' or 'X', 'y' or 'Y', 'z' or 'Z'
 
 /*
 Deluxe Mouse
