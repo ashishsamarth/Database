@@ -1,13 +1,12 @@
-By default the zipped file of 'LINUX.X64_193000_db_home.zip', comes with 'Human_Resources' schema configuration files. But even this schema is not pre-installed.
 If you wish to install all the sample schemas in one go, perform the following
 
-1.  Download the 'db-sample-schemas-19c.zip' to your local machine and then ftp the zipped file to /tmp on the server.
+1.  Download the 'db-sample-schemas-21.1' to your local machine and then ftp the zipped file to /tmp on the server.
 
-2.  As a 'oracle' user, unzip the 'db-sample-schemas-19c.zip' in /tmp.
+2.  As a 'oracle' user, unzip the 'db-sample-schemas-21.1' in /tmp.
 
-3.  As a 'oracle' user, navigate to $ORACLE_HOME/demo/schema and except the 'log' directory, delete all files and directories.
+3.  As a 'oracle' user, navigate to $ORACLE_HOME/demo/schema.
 
-4.  As a 'oracle' user, move all the directories and files inside 'db-sample-schemas-19c' to $ORACLE_HOME/demo/schema.
+4.  As a 'oracle' user, move all the directories and files inside 'db-sample-schemas-21.1' to $ORACLE_HOME/demo/schema.
 
 5.  The sample schemas have files containing variables that needs to be replaced, before you can run mksample.sql to install the schemas
 
@@ -22,9 +21,9 @@ If you wish to install all the sample schemas in one go, perform the following
         1.  LSNR is up and Database is started.
         2.  Your pwd is = $ORACLE_HOME/demo/schema 
 
-    a.  sqlplus sys as sysdba
-    b.  alter session set container=samarth_db_sandbox;
-    c.  @mksample syspassword1 syspassword1 passwordforhr passwordforoe passwordforpm passwordforix passwordforsh passwordforbi users temp $ORACLE_HOME/demo/log localhost:1521/samarth_db_sandbox
+    a.  sqlplus / as sysdba
+    b.  alter session set container=orclpdb21c;
+    c.  @mksample syspassword1 syspassword1 passwordforhr passwordforoe passwordforpm passwordforix passwordforsh passwordforbi users temp $ORACLE_HOME/demo/log localhost:1521/orclpdb21c
 
     Explanation:
         1st entry syspassword1                          :-  Is the password for sys
