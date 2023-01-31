@@ -1,34 +1,41 @@
 
 
 DATE:
-DATE data type allows you to store a date and time value. Tt stores both a date and a time. It stores year, month, day, hours, minutes, and seconds. There is no DATETIME data type in Oracle SQL.
+DATE data type allows you to store a date and time value. Tt stores both a date and a time. It stores year, month, day, hours, minutes, and seconds. 
+There is no DATETIME data type in Oracle SQL.
 This data type is useful if you want to store date and time values, and don’t need to store time zones or fractions of seconds (which the other date data types do).
 
 Important Note: The default display format of this data type only shows the date (year, month, and day), and not the time
 
 
 TIMESTAMP:
-TIMESTAMP data type in Oracle is similar to the DATE data type, except you can store fractions of a second. You can store up to a precision of 9, which means 9 decimal places within a second
+TIMESTAMP data type in Oracle is similar to the DATE data type, except you can store fractions of a second. You can store up to a precision of 9, 
+which means 9 decimal places within a second
 TIMESTAMP allows for more granular recording of time than the DATE data type.
 
 For example, if you’re recording data in a log file to see exactly when certain events happen,
 
 
 TIMESTAMP WITH TIME ZONE:
-TIMESTAMP WITH TIME ZONE data type is like the TIMESTAMP data type, but also includes a time zone. This means it includes year, month, day, hours, minutes, seconds, fractional seconds, and time zone
+TIMESTAMP WITH TIME ZONE data type is like the TIMESTAMP data type, but also includes a time zone. This means it includes year, month, day, hours, minutes, seconds, 
+fractional seconds, and time zone
 
 An example of a TIMESTAMP WITH TIME ZONE value is: “2018-04-21 07:41:03.152 -7:00.”
 This is the 21st of April 2018, at 7:41:03.152 in the morning. It also indicates that the value is -7 hours from GMT/UTC.
 
 
 TIMESTAMP WITH LOCAL TIME ZONE:
-TIMESTAMP WITH LOCAL TIME ZONE is similar to the TIMESTAMP WITH TIME ZONE, in that it stores a date, time, and time zone. However, when you SELECT a value from this type of column, the value is displayed in the user’s time zone, instead of the database’s time zone like the TIMESTAMP WITH TIME ZONE data type
+TIMESTAMP WITH LOCAL TIME ZONE is similar to the TIMESTAMP WITH TIME ZONE, in that it stores a date, time, and time zone. However, when you SELECT a value from this 
+type of column, the value is displayed in the user’s time zone, instead of the database’s time zone like the TIMESTAMP WITH TIME ZONE data type
 This makes it easier to convert data to a different time zone depending on the user that’s viewing it
 
 
 INTERVAL YEAR TO MONTH:
-The date data types we have looked at so far are used to store a “point in time”: a specific date and a specific time. However, there is sometimes a need to store a “period of time” such as “4 years” or “2 months.” There are a few ways this could be done.
-You could store it in a NUMBER data type, which represents the number of months you want to store. However, what if you also want to store years, or days? You could create a few different columns to store each value (e.g., a year column and a month column). This would mean a lot of extra columns. It would also mean you could store some invalid data. This is where the INTERVAL data types come in. They are used to store a period of time.
+The date data types we have looked at so far are used to store a “point in time”: a specific date and a specific time. However, there is sometimes a need to store 
+a “period of time” such as “4 years” or “2 months.” There are a few ways this could be done.
+You could store it in a NUMBER data type, which represents the number of months you want to store. However, what if you also want to store years, or days? 
+You could create a few different columns to store each value (e.g., a year column and a month column). This would mean a lot of extra columns. 
+It would also mean you could store some invalid data. This is where the INTERVAL data types come in. They are used to store a period of time.
 
 The INTERVAL YEAR TO MONTH data type is used to store a number of years and months. The value is separated by a dash, so a value of “03-06” represents 3 years 6 months
 
