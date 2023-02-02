@@ -41,7 +41,8 @@ So, rather than using the FLOAT data type, which is translated to NUMBER, its be
 
 
 DECIMAL:
-Just like the FLOAT data type, Oracle includes a DECIMAL data type that is also an ANSI standard data type. It’s also translated to a NUMBER data type by the Oracle database.
+Just like the FLOAT data type, Oracle includes a DECIMAL data type that is also an ANSI standard data type. It’s also translated 
+to a NUMBER data type by the Oracle database.
 
 
 BINARY_FLOAT:
