@@ -1,5 +1,4 @@
 LONG RAW data type is a mix between the LONG data type and the RAW data type. It allows for a large amount of data to be stored 
-(like the LONG data type), and 
-it ensures characters are not converted when exporting data to other systems.
+(like the LONG data type), and it ensures characters are not converted when exporting data to other systems.
 
 LONG RAW data type is deprecated by oracle
