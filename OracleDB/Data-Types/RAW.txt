@@ -1,2 +1,2 @@
-The RAW data type is similar to VARCHAR2, as it stores a variable-length string. However, it stores data in a raw format, which means it does not get converted 
-when exporting to another type of database
+The RAW data type is similar to VARCHAR2, as it stores a variable-length string. However, it stores data in a raw format, which 
+means it does not get converted when exporting to another type of database
