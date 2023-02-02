@@ -1,8 +1,8 @@
 NCHAR data type is short for “Unicode character.” It’s very similar to the CHAR datatype, as it stores character data of a fixed 
 length and adds spaces for shorter values to bring the value up to the length you have specified
 
-It’s used for storing text values that contain Unicode characters. Unicode characters are a set of special characters that can be used in software. 
-They have their own data type in Oracle, as they can often require more than one byte to store the character. 
+It’s used for storing text values that contain Unicode characters. Unicode characters are a set of special characters that can be 
+used in software. They have their own data type in Oracle, as they can often require more than one byte to store the character. 
 
 Some examples of Unicode characters are
 
