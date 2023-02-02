@@ -35,8 +35,8 @@ freedom with the size of the value, if you don’t want a 38-digit number.
 
 
 FLOAT:
-Oracle includes a FLOAT data type, which is an ANSI standard data type (meaning it is available in all types of SQL). However, just like INTEGER, the FLOAT data type 
-is translated internally by the Oracle database to NUMBER
+Oracle includes a FLOAT data type, which is an ANSI standard data type (meaning it is available in all types of SQL). However, 
+just like INTEGER, the FLOAT data type is translated internally by the Oracle database to NUMBER
 So, rather than using the FLOAT data type, which is translated to NUMBER, its better to use the NUMBER.
 
 
