@@ -64,5 +64,6 @@ BINARY_DOUBLE data type is very similar to the BINARY_FLOAT data type:
     a.  They both store floating-point numbers.
     b.  They both store numbers in an approximate way, rather than the exact way that NUMBER does
 
-However, BINARY_FLOAT is a 32-bit precision value and BINARY_DOUBLE is a 64-bit precision value. This means it can store many more decimal places than BINARY_FLOAT. 
-If you need to store a large decimal number, and BINARY_FLOAT cannot handle it, then BINARY_DOUBLE may be a good option
+However, BINARY_FLOAT is a 32-bit precision value and BINARY_DOUBLE is a 64-bit precision value. This means it can store many more 
+decimal places than BINARY_FLOAT. If you need to store a large decimal number, and BINARY_FLOAT cannot handle it, then BINARY_DOUBLE 
+may be a good option
