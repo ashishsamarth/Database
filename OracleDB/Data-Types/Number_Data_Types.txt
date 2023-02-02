@@ -55,8 +55,8 @@ There are a few differences between BINARY_FLOAT and the NUMBER data type:
     b.  BINARY_FLOAT is often smaller to store than NUMBER
     c.  BINARY_FLOAT is an approximate definition, where NUMBER is an exact definition
 
-Note:- When a BINARY_FLOAT value is stored, an approximate value is stored. This can cause rounding issues if you’re using many calculations on this number. However, it’s good 
-for storing large decimal or floating-point numbers.
+Note:- When a BINARY_FLOAT value is stored, an approximate value is stored. This can cause rounding issues if you’re using many 
+calculations on this number. However, it’s good for storing large decimal or floating-point numbers.
 
 
 BINARY_DOUBLE:
