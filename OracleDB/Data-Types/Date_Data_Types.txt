@@ -26,9 +26,10 @@ This is the 21st of April 2018, at 7:41:03.152 in the morning. It also indicates
 
 
 TIMESTAMP WITH LOCAL TIME ZONE:
-TIMESTAMP WITH LOCAL TIME ZONE is similar to the TIMESTAMP WITH TIME ZONE, in that it stores a date, time, and time zone. However, when you SELECT a value from this 
-type of column, the value is displayed in the user’s time zone, instead of the database’s time zone like the TIMESTAMP WITH TIME ZONE data type
-This makes it easier to convert data to a different time zone depending on the user that’s viewing it
+TIMESTAMP WITH LOCAL TIME ZONE is similar to the TIMESTAMP WITH TIME ZONE, in that it stores a date, time, and time zone. However, 
+when you SELECT a value from this type of column, the value is displayed in the user’s time zone, instead of the database’s time 
+zone like the TIMESTAMP WITH TIME ZONE data type. This makes it easier to convert data to a different time zone depending on the 
+user that’s viewing it
 
 
 INTERVAL YEAR TO MONTH:
