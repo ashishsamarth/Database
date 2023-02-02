@@ -1,3 +1,8 @@
 BLOB data type stands for “binary large object.” It’s used to store unstructured binary objects.
+<<<<<<< HEAD
 This means it’s useful for storing images or audio files that can’t be stored in text columns. It stores data for a single file, but it can’t store character data. 
 It has a maximum size of 4GB
+=======
+This means it’s useful for storing images or audio files that can’t be stored in text columns. It stores data for a single file, 
+but it can’t store character data. It has a maximum size of 4GB
+>>>>>>> f238fc5 (BLOB)
