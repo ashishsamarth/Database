@@ -1,5 +1,5 @@
-LONG data type can be used to store text values up to 2GB in length. VARCHAR2 had a maximum length of 4000 bytes (4KB), which represents 4KB. 
-LONG is much larger than that.
+LONG data type can be used to store text values up to 2GB in length. VARCHAR2 had a maximum length of 4000 bytes (4KB), which 
+represents 4KB. LONG is much larger than that.
 
-This datatype is now deprecated by Oracle, If you want to store a large amount of data in a single field, it’s recommended to use LOB data types, 
-such as CLOB or BLOB
+This datatype is now deprecated by Oracle, If you want to store a large amount of data in a single field, it’s recommended to use 
+LOB data types, such as CLOB or BLOB
