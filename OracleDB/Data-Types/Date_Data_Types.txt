@@ -1,9 +1,10 @@
 
 
 DATE:
-DATE data type allows you to store a date and time value. Tt stores both a date and a time. It stores year, month, day, hours, minutes, and seconds. 
-There is no DATETIME data type in Oracle SQL.
-This data type is useful if you want to store date and time values, and don’t need to store time zones or fractions of seconds (which the other date data types do).
+DATE data type allows you to store a date and time value. Tt stores both a date and a time. It stores year, month, day, hours, 
+minutes, and seconds. There is no DATETIME data type in Oracle SQL.
+This data type is useful if you want to store date and time values, and don’t need to store time zones or fractions of seconds 
+(which the other date data types do).
 
 Important Note: The default display format of this data type only shows the date (year, month, and day), and not the time
 
