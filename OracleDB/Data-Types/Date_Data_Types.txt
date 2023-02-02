@@ -40,7 +40,8 @@ to store years, or days? You could create a few different columns to store each 
 This would mean a lot of extra columns. It would also mean you could store some invalid data. This is where the INTERVAL data types 
 come in. They are used to store a period of time.
 
-The INTERVAL YEAR TO MONTH data type is used to store a number of years and months. The value is separated by a dash, so a value of “03-06” represents 3 years 6 months
+The INTERVAL YEAR TO MONTH data type is used to store a number of years and months. The value is separated by a dash, so a value 
+of “03-06” represents 3 years 6 months
 
 The advantages of using this data type are:
     a.  You can store the data in a single column, and not two columns, saving time with your queries and saving space on the database.
