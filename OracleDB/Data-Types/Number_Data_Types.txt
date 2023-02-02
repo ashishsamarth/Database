@@ -46,8 +46,8 @@ to a NUMBER data type by the Oracle database.
 
 
 BINARY_FLOAT:
-The BINARY_FLOAT data type is used for storing floating-point numbers, which are numbers that contain decimal places. It’s similar to “float” data types in other 
-programming languages. This has 32-bit precision
+The BINARY_FLOAT data type is used for storing floating-point numbers, which are numbers that contain decimal places. It’s similar 
+to “float” data types in other programming languages. This has 32-bit precision
 
 There are a few differences between BINARY_FLOAT and the NUMBER data type:
 
