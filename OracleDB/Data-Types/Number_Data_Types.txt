@@ -1,5 +1,5 @@
-There are many data types that can be used to store number values in Oracle. While you can store numbers in text-based data types such as VARCHAR2, 
-it’s better to use number data types if you’re storing just numbers because
+There are many data types that can be used to store number values in Oracle. While you can store numbers in text-based data types 
+such as VARCHAR2, it’s better to use number data types if you’re storing just numbers because
 
 a.  You can perform arithmetic operations on them
 b.  You can round them to a different number of decimal places
@@ -8,8 +8,8 @@ c.  You can aggregate them using sum, average, and other features
 
 NUMBER:
 NUMBER data type in Oracle is used to store numbers
-It can store either whole numbers or decimal numbers, positive or negative numbers. The range of a value stored as a NUMBER data type is 
-from -9 × 10^125 to 9 × 10^125, which means numbers that areabout 125 digits, positive or negative
+It can store either whole numbers or decimal numbers, positive or negative numbers. The range of a value stored as a NUMBER data 
+type is from -9 × 10^125 to 9 × 10^125, which means numbers that areabout 125 digits, positive or negative
 
 When you define a NUMBER data type, you can define two things: a precision and a scale
     a.  Precision is the total number of digits in the number
