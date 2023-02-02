@@ -28,10 +28,10 @@ NUMBER(10, 3)
 
 
 INTEGER:
-INTEGER data type is an SQL standard data type, which means it is in all SQL databases. However, in Oracle, it’s the same as defining a NUMBER(38) data type, 
-which is a NUMBER with 38 digits and 0 decimal places.
-Because the INTEGER data type is actually translated to a NUMBER(38) data type, it’s better to use NUMBER. It allows you more freedom with the size of the value, 
-if you don’t want a 38-digit number.
+INTEGER data type is an SQL standard data type, which means it is in all SQL databases. However, in Oracle, it’s the same as 
+defining a NUMBER(38) data type, which is a NUMBER with 38 digits and 0 decimal places.
+Because the INTEGER data type is actually translated to a NUMBER(38) data type, it’s better to use NUMBER. It allows you more 
+freedom with the size of the value, if you don’t want a 38-digit number.
 
 
 FLOAT:
