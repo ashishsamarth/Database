@@ -10,16 +10,16 @@ Important Note: The default display format of this data type only shows the date
 
 
 TIMESTAMP:
-TIMESTAMP data type in Oracle is similar to the DATE data type, except you can store fractions of a second. You can store up to a precision of 9, 
-which means 9 decimal places within a second
+TIMESTAMP data type in Oracle is similar to the DATE data type, except you can store fractions of a second. You can store up to a 
+precision of 9, which means 9 decimal places within a second
 TIMESTAMP allows for more granular recording of time than the DATE data type.
 
 For example, if you’re recording data in a log file to see exactly when certain events happen,
 
 
 TIMESTAMP WITH TIME ZONE:
-TIMESTAMP WITH TIME ZONE data type is like the TIMESTAMP data type, but also includes a time zone. This means it includes year, month, day, hours, minutes, seconds, 
-fractional seconds, and time zone
+TIMESTAMP WITH TIME ZONE data type is like the TIMESTAMP data type, but also includes a time zone. This means it includes year, 
+month, day, hours, minutes, seconds, fractional seconds, and time zone
 
 An example of a TIMESTAMP WITH TIME ZONE value is: “2018-04-21 07:41:03.152 -7:00.”
 This is the 21st of April 2018, at 7:41:03.152 in the morning. It also indicates that the value is -7 hours from GMT/UTC.
