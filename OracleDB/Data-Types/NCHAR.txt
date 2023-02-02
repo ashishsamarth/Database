@@ -11,8 +11,8 @@ Mathematical characters, such as the Greek symbol that represents
 
 Many characters with accents: for example, â
 
-The standard characters, such as the alphabet and symbols visible on a keyboard, can be stored in a single byte of data per character. 
-This makes it possible to store in a CHAR data type, where one byte equals one character.
+The standard characters, such as the alphabet and symbols visible on a keyboard, can be stored in a single byte of data per 
+character. This makes it possible to store in a CHAR data type, where one byte equals one character.
 
 For Unicode characters, it’s possible that a character needs to be stored in multiple bytes, so a special data type is needed. 
 This means that if you want to store these special Unicode characters, and you need to store them in a fixed length, use NCHAR instead of CHAR
