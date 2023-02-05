@@ -1,4 +1,4 @@
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 Why is MongoDB a NoSQL Database?
 Check all answers that apply
 
@@ -6,7 +6,7 @@ A. Because it uses a structured way to store and access data
 B. Because it does not utilizie tables, rows and columns to organize data
 
 Answer: Both
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is a Document?
 In MongoDB how does a document relate to a collection?
 
@@ -18,11 +18,11 @@ D. Collections are documents that are organized in rows and columns.
 Answer: B
 Note: A way to organize and store data as a set of field-value pairs
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is a Collection?
 An organized store of documents in MongoDB, usually with common fields between documents
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is the MongoDB Database?
 Select the statements that together help build the most complete definition of the MongoDB database:
 
@@ -33,7 +33,7 @@ D. MongoDB is a NoSQL Databases that uses documents to store data in an organice
 
 Answer: A and D
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is a Document?
 In a MongoDB Document what is the role of fields and values?
 
@@ -43,7 +43,7 @@ C. A field is a unique identified for a specific datapoint.
 
 Answer: B and C
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is Atlas?
 How is MongoDB Atlas related to MongoDB the database?
 
@@ -54,7 +54,7 @@ D. Atlas has many tools and services within it that are built specifically for t
 
 Answer: A and D
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 What are Pros and Cons of JSON
 Pros: Friendly, Readable and Familiar
 Cons: 
@@ -64,7 +64,7 @@ Cons:
 
 Alternative solution to this as identified by MongoDB was using BSON (Binary JSON)
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is BSON?
 BSON stands for Binary JSON
 BSON's binary structure encodes type and length information, which allows it to be parsed much more quickly
@@ -87,7 +87,7 @@ updating a central system catalog and without taking the database offline. When 
 continues to store the updated objects without the need to perform costly ALTER TABLE operations – or worse, having to redesign the schema from 
 scratch. 
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is JSON: Which of the following documents is correct JSON?
 
 A. ["name": "Devi", "age": 19, "major": "Computer Science"]
@@ -100,42 +100,42 @@ JSON rules:
  b. Key-Value pairs must be separated by comas
  c. Must start and end with curly-brackets
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 Write BSON or JSON in the numbered blanks in the following scentences to make them true:
 
 a. MongoDB stortes data in --BSON, and you can then view it in --JSON
 b. --BSON is faster to parse and lighter to store than --JSON
 c. --JSON supports fewer data types than --BSON
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is the command to import data in JSON format?
 A. mongoimport
 B. mongorestore
 
 Answer: A. mongoimport
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is the command to export data in JSON format?
 A. mongoexport
 B. mongodump
 
 Answer: mongoexport
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is the command to import data in BSON format?
 A. mongorestore
 B. mongoimport
 
 Answer: mongorestore
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is the command to export data in BSON format?
 A. mongodump
 B. mongoexport
 
 Answer: mongodump
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 Which of the following commands will add a collection that is stored in animals.json to and Atlas cluster ?
 A. mongorestore
 B. mongodump
@@ -147,13 +147,13 @@ Answer: C. mongoimport
 Note: The key to identify the correct answer between mongorestore and mongoimport is the file extension, if the file extension is "json" then the 
 answer is mongoimport if it would have been 'animals.bson' then answer would have been mongorestore.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is a namespace in MongoDB Data explorer?
 Answer: Its the concatenation of the database name and collection name
 For e.g.: sample_airbnb.listingsAndReviews
 Here: Database is - sample_airbnb and Collection is - listingsAndReviews
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 In the sample_training.trips collection a person with birth year 1961 took a trip that started at "Howard St & Centre St". What was the 
 end station name for that trip?
 
@@ -164,7 +164,7 @@ Note: This question evaluates an 'and' condition in SQL
 
 Answer: "South End Ave & Liberty St"
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 How many documents are returned by a find query as the default value?
 A. 1
 B. 10
@@ -174,7 +174,7 @@ D. ALL
 Answer: C. 20 : The default configuration in MongoDB is to return only 20 documents for a given criteria
 This value is defined in "DBQuery.shellBatchSize"
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is the command to use in mongoshell, if you want to view the next set of documents returned by a find command after the initial 20 has 
 been displayed?
 A. next
@@ -187,7 +187,7 @@ it - Is used to iterate through the cursor.
 (cursor is an object which the find command has returned)
 Formally a cursor is pointer to the result set of a query.A pointer is a direct address to the memory location
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is the command to get the number of returned results?
 A. more
 B. count
@@ -197,7 +197,7 @@ Answer: C. count()
 Syntax: db.zips.find({"state":"NY", "city":"ALBANY"}).count() 
 Result: 7
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 What happens if you run a find command on a collection without any criteria?
 db.zips.find({})
 A. It returns first 20 rows from the collection
@@ -207,7 +207,7 @@ D. It returns top 20 rows in ascending order of 'objectID'
 
 Answer: A. It returns first 20 rows from the collection
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 Find Command: What does "it" do in the mongo shell?
 
 A. It is not a mongo shell command
@@ -217,7 +217,7 @@ D. Interferes with the task
 
 Answer: B. Iterates through the cursor results
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 The mongo shell: Which of the following statements are true about the mongo shell?
 
 A. Mongo shell automatically returns an ordered list of results
@@ -226,7 +226,7 @@ C. It allows you to interact with your MongoDB instance without using a Graphica
 
 Answer: B and C
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is common field in every document?
 A. _id
 B. _rowid
@@ -242,7 +242,7 @@ The type of _id is objectId(), It doesn't have to have the value of type 'object
 values for the document.
 If your dataset have unique values that can be used for identification, those can be very well used as values for '_id'
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 ObjectId: How does the value of _id get assigned to a document?
 
 A. It is automatically generated as an ObjectId type value
@@ -252,7 +252,7 @@ D. You can select a non ObjectId type value when inserting a new document, as lo
 
 Answer: A and D
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 In a scenario of mongoimport what does E11000 duplicate key error collection mean?
 A. The JSON file being imported has different encoding
 B. The data in JSON file already exists in the collection
@@ -267,7 +267,7 @@ then the values are inserted.
 
 syntax: M001 mongoimport --uri="mongodb+srv://m001-student:m001-mongodb-basics@sandbox.delta.mongodb.net/sample_supplies" --drop sales.json
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is the command to get a general idea of the shape of documents in a collection?
 A. findOne()
 B. sampleOne()
@@ -276,7 +276,7 @@ D. findOne
 
 Answer: A. findOne()
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 Insert Errors: Select all true statements from the following list:
 
 A. MongoDB can store duplicate documents in the same colleciton, as long as their _id values are different
@@ -288,7 +288,7 @@ before insertion
 
 Answer: A, E
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 What will be the behaviour of the following insert command?
 db.inspections.insert([{"_id":1, "test":1}, {"_id":1, "test":2}, {"_id":3, "test":3}])
 
@@ -304,7 +304,7 @@ Hence, the first document {"_id":1, "test":1} gets inserted successfully, but {"
 collection and since the insert failed for the 2nd document, the command execution stops and insertion of {"_id":3, "test":3} is not 
 attempted.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 What will be the behaviour of the following insert command?
 db.inspections.insert([{"_id":1, "test":1}, {"_id":1, "test":2}, {"_id":3, "test":3}], {"ordered": fasle})
 
@@ -315,7 +315,7 @@ C. The insert command succeeds for {"_id":1, "test":2} and {"_id":3, "test":3} b
 Answer: B. The insert command succeeds for {"_id":1, "test":1} and {"_id":3, "test":3} but fails for {"_id":1, "test":2}
 Note: In case of an 'unordered' or {"ordered": fasle} insert, every document with a unique '_id' gets inserted to the collection.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 Assuming the above commands have been executed successfully, what will be behavior of the following command?
 
 db.inspection.insert([{"_id": 1, "test": 1}, {"_id": 3, "test":3}])
@@ -331,7 +331,7 @@ same is valid for databases as well, if it does not exist, 'use dbname' will cre
 collection has atleast one document in that collection.
 If you simply execute 'use dbname' and do not create a collection and a document in the collection, 'use dbname' will NOT create a DB.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 Insert Order: Which of the following commands will successfully insert 3 new documents into and empty pets collection
 
 A. db.pets.insert([{"pet": "cat"}, {"pet": "dog"}, {"pet": "fish"}])
@@ -350,7 +350,7 @@ Will be executed successfully, since {"ordered": false} will continue execution 
 
 C. db.pets.insert([{"_id": 1, "pet": "cat"}, {"_id": 2, "pet": "Dog"}, {"_id": 3, "pet": "fish"}, {"_id": 4, "pet": "snake"}])
 Will be executed successfully for the top 3 documents, have unique values for _id, while the last one will fail for duplicate key error
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 Updating Documents: MongoDB has a flexible data model, which means that you can have fields that contains documents, or arrays as their values
 Select any invalid MongoDB documents from the given choices.
 
@@ -375,7 +375,7 @@ D. None of the above
 
 Answer: D. None of the above
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 Update all the documents in the zips collection to increment the population by 10 for HUDSON city
 Here's the sample structure of the document
 
@@ -393,7 +393,7 @@ Explanation:
 Function: updateMany() : is used to update more than one document in the collection
 Operator: "$inc" : is the increment operator in MongoDB
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 Update the population of HUDSON city with zip code 54016 to 17630
 Here's the original document for the criteria
 
@@ -435,7 +435,7 @@ db.grades.updateOne({ "student_id": 250, "class_id": 339 },
                                 }
                      })
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 Updating documents in the shell: Given a pets collection where each document has the following structure and fields:
 
 {
@@ -456,7 +456,7 @@ D. db.pets.updateMany({"pet": "cat"}, {"$set": {"type": "dangerous", "look": "ad
 Answer: The focus of this question is on "adding new fields", the only two new fields that do not exist in the structure already are
 "look" and "type", hence the answer is B and D.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 Given the following structure of a document in the zips collection?
 
 { _id: ObjectId("5c8eccc1caa187d17ca75e22"),
@@ -494,7 +494,7 @@ db.zips.find({"city": "HUDSON", "zip": "54016"}).pretty()
   pop: 16156,
   state: 'WI' }
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 Deleting Documents: The sample dataset contains a few databases that we will not use in this couse. Clean up your Atlas cluster and get rid 
 of all the collections in these database:
 
@@ -510,7 +510,7 @@ B. No
 Answer: A. Yes
 Note: MongoDB Database cannot be empty. It must have atleast one collection and the collection must have atleast one document
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 Deleting Documents: Which of the following commands will delete a collection name villians?
 
 A. db.villians.dropAll()
@@ -519,7 +519,7 @@ C. db.villians.delete()
 
 Answer: B. db.villians.drop()
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 Given the following structure in the trips collection
 
 {_id:572bb8222b288919b68ac2d4
@@ -542,4 +542,4 @@ D. db.trips.find({"tripduration": ("$lt": 70)})
 
 Answer: A. db.trips.find({"tripduration": {"$lte": 70}})
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
