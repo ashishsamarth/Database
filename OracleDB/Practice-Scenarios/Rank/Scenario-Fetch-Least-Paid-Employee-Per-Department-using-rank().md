@@ -28,7 +28,7 @@ Scenario-Fetch-Least-Paid-Employee-Per-Department-using-rank()
         salaried_employees
     WHERE
             1 = 1
-        AND assigned_rank = 1;
+        AND assigned_rank = 1; 
 
 --------------------------------------------------------------------------------
 
