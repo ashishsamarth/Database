@@ -14,4 +14,4 @@ Provide a List of First-Name for all employees in a particular department
 
 --------------------------------------------------------------------------------
 
-![!](../../../Assets/Oracle/Scenario-Provide-List-of-Employees-Per-deparment-id-using-listagg().PNG)
+![!](../../../../Assets/Oracle/Scenario-Provide-List-of-Employees-Per-deparment-id-using-listagg().PNG)
