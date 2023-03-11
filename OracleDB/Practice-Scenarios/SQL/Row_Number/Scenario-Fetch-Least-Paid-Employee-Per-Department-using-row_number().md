@@ -29,4 +29,4 @@ Scenario: Fetch-Least-Paid-Employee-Per-Department-using-row_number()
 
 --------------------------------------------------------------------------------
 
-![!](../../../Assets/Oracle/Scenario-Fetch-Least-Paid-Employee-Per-Department-using-row_number().PNG)
+![!](../../../../Assets/Oracle/Scenario-Fetch-Least-Paid-Employee-Per-Department-using-row_number().PNG)
