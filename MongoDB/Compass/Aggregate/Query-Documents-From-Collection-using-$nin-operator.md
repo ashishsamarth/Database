@@ -6,4 +6,4 @@ Query-Documents-From-Collection-using-$nin
 
 --------------------------------------------------------------------------------
 
-![!](../../../Assets/MongoDB/Query-Documents-From-Collection-using-%24nin-operator.png
+![!](../../../Assets/MongoDB/Query-Documents-From-Collection-using-%24nin-operator.png)
