@@ -1,9 +1,9 @@
 --------------------------------------------------------------------------------
-FindOne()
+Query-Documents-From-Collection-using-$and
 
 --------------------------------------------------------------------------------
-    Query Documents from Collections: Emulate FindOne
+    Query Documents from Collections: using $and operator
 
 --------------------------------------------------------------------------------
 
-![!](../../../Assets/MongoDB/Query-Documents-From-Collection-Emulate-FindOne.png)
+![!](../../../Assets/MongoDB/Query-Documents-From-Collection-using-%24and-operator.png)
