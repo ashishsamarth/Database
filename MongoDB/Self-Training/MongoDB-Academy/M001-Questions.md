@@ -1,9 +1,6 @@
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
-Why is MongoDB a NoSQL Database?
-
+Why is MongoDB a NoSQL Database? Check all answers that apply
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
-Check all answers that apply
-
     A. Because it uses a structured way to store and access data
     B. Because it does not utilizie tables, rows and columns to organize data
 
@@ -12,7 +9,6 @@ Check all answers that apply
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is a Document?
 In MongoDB how does a document relate to a collection?
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
     A. Collections are tables of documents and other collecitons.
     B. Collections consist of one or many documents.
@@ -25,39 +21,39 @@ In MongoDB how does a document relate to a collection?
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is a Collection?
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
-  An organized store of documents in MongoDB, usually with common fields between documents
+    An organized store of documents in MongoDB, usually with common fields between documents
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is the MongoDB Database?
 Select the statements that together help build the most complete definition of the MongoDB database:
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+    A. The MongoDB databse is an organized way to store and access data.
+    B. MongoDB Database organizes documents in rows and columns.
+    C. MongoDB's Database uses tables of related data
+    D. MongoDB is a NoSQL Databases that uses documents to store data in an organiced way.
 
-A. The MongoDB databse is an organized way to store and access data.
-B. MongoDB Database organizes documents in rows and columns.
-C. MongoDB's Database uses tables of related data
-D. MongoDB is a NoSQL Databases that uses documents to store data in an organiced way.
-
-Answer: A and D
+    Answer: A and D
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is a Document?
 In a MongoDB Document what is the role of fields and values?
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+    A. Values do not have to be attached to fields, and can be stand alone data points.
+    B. Each Field has a value associated with it.
+    C. A field is a unique identified for a specific datapoint.
 
-A. Values do not have to be attached to fields, and can be stand alone data points.
-B. Each Field has a value associated with it.
-C. A field is a unique identified for a specific datapoint.
-
-Answer: B and C
+    Answer: B and C
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is Atlas?
 How is MongoDB Atlas related to MongoDB the database?
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+    A. They both are MongoDB products
+    B. Atlas is a MongoDB service that can work with any Database, but in this course it will used with MongoDB
+    C. MongoDB Database has the same functionality as Atlast, but without the friendly user interface.
+    D. Atlas has many tools and services within it that are built specifically for the MongoDB Database.
 
-A. They both are MongoDB products
-B. Atlas is a MongoDB service that can work with any Database, but in this course it will used with MongoDB
-C. MongoDB Database has the same functionality as Atlast, but without the friendly user interface.
-D. Atlas has many tools and services within it that are built specifically for the MongoDB Database.
-
-Answer: A and D
+    Answer: A and D
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 What are Pros and Cons of JSON
