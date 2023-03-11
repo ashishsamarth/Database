@@ -39,14 +39,14 @@ Utilizing INNER JOIN Keyword
 --------------------------------------------------------------------------------
 Utilizing INNER JOIN Keyword along with USING keyword
 --------------------------------------------------------------------------------
-SELECT
-    EMP.EMPLOYEE_ID,
-    DEPT.DEPARTMENT_NAME,
-    DEPARTMENT_ID --Do not use alias here, since we are utilizing 'USING' keyword
-FROM
-         HR.EMPLOYEES EMP
-    INNER JOIN HR.DEPARTMENTS DEPT USING ( DEPARTMENT_ID )
-    FETCH FIRST 15 ROWS ONLY;
+    SELECT
+        EMP.EMPLOYEE_ID,
+        DEPT.DEPARTMENT_NAME,
+        DEPARTMENT_ID --Do not use alias here, since we are utilizing 'USING' keyword
+    FROM
+            HR.EMPLOYEES EMP
+        INNER JOIN HR.DEPARTMENTS DEPT USING ( DEPARTMENT_ID )
+        FETCH FIRST 15 ROWS ONLY;
 
 --------------------------------------------------------------------------------
 
