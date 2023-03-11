@@ -33,4 +33,4 @@ Scenario-Fetch-Highest-Paid-Employee-Per-Department-using-dense_rank()
 
 --------------------------------------------------------------------------------
 
-![!](../../../Assets/Oracle/Scenario-Fetch-Highest-Paid-Employee-Per-Department-using-dense_rank().PNG)
+![!](../../../../Assets/Oracle/Scenario-Fetch-Highest-Paid-Employee-Per-Department-using-dense_rank().PNG)
