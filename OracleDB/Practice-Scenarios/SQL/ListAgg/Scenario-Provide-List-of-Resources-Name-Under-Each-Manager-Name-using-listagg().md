@@ -29,4 +29,4 @@ Provide: A list of Resources Name under Each Manager Name
 
 --------------------------------------------------------------------------------
 
-![!](../../../Assets/Oracle/Scenario-Provide-List-of-Resources-Name-Under-Each-Manager-Name-using-listagg().PNG)
+![!](../../../../Assets/Oracle/Scenario-Provide-List-of-Resources-Name-Under-Each-Manager-Name-using-listagg().PNG)
