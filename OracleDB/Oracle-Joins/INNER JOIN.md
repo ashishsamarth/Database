@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
 An inner join only returns results that match in both tables. Your SELECT query can use INNER JOIN keyword instead of the JOIN keyword
 so, following queries, will return the exact same result.
---------------------------------------------------------------------------------
+
 
 Example:
 --------------------------------------------------------------------------------
