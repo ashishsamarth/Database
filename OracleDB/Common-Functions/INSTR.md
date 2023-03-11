@@ -6,10 +6,11 @@ Syntax: INSTR( string, substring [, start_position [, th_appearance ] ] )
 
 --------------------------------------------------------------------------------
 Returns:
-The INSTR function returns a numeric value. The first position in the string is 1.
-If substring is not found in string, then the INSTR function will return 0.
-If string is NULL, then the INSTR function will return NULL.
-If substring is NULL, then the INSTR function will return NULL
+
+    The INSTR function returns a numeric value. The first position in the string is 1.
+    If substring is not found in string, then the INSTR function will return 0.
+    If string is NULL, then the INSTR function will return NULL.
+    If substring is NULL, then the INSTR function will return NULL
 
 --------------------------------------------------------------------------------
 
