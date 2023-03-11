@@ -35,4 +35,4 @@ Select Bottom N Rows from a Dataset - using CTE (Common Table Expressions)
 
 --------------------------------------------------------------------------------
 
-![!](../../../Assets/Oracle/Scenario-Select-Bottom-N-Rows-From-Data-Set.PNG)
+![!](../../../Assets/Oracle/Scenario-Fetch-First-5-Rows-Only.PNG)
