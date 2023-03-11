@@ -10,4 +10,4 @@ Scenario-Fetch-First-5-Rows-Only
     Fetch first 5 rows only;
 
 --------------------------------------------------------------------------------
-![!](../../../../Database/Assets/Oracle/Scenario-Fetch-First-5-Rows-Only.PNG)
+![!](../../../Assets/Oracle/Scenario-Fetch-First-5-Rows-Only.PNG)    
