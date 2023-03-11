@@ -35,4 +35,4 @@ Select TOP N Rows from a Dataset - using CTE (Common Table Expressions)
 
 --------------------------------------------------------------------------------
 
-![!](../../../Assets/Oracle/Scenario-Select-Top-N-Rows-From-Data-Set.PNG)    
+![!](../../../..Assets/Oracle/Scenario-Select-Top-N-Rows-From-Data-Set.PNG)    
