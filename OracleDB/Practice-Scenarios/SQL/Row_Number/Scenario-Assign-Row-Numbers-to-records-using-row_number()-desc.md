@@ -16,4 +16,4 @@ Scenario-Assign-Row-Numbers-to-records-using-row_number()-desc
         Order By row_number() over(order by a.employee_id desc) Nulls First;
 
 --------------------------------------------------------------------------------
-![!](../../../Assets/Oracle/Scenario-Assign-Row-Numbers-to-records-using-row_number()-desc.PNG)
+![!](../../../../Assets/Oracle/Scenario-Assign-Row-Numbers-to-records-using-row_number()-desc.PNG)
