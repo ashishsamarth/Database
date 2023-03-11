@@ -38,4 +38,4 @@ Scenario: Get the number of departments per manager and order the dataset by num
         3 DESC;
 
 --------------------------------------------------------------------------------
-![!](../../../Assets/Oracle/Scenario-Provide-List-of-Departments-and-their-number-per-Manager.PNG)
+![!](../../../../Assets/Oracle/Scenario-Provide-List-of-Departments-and-their-number-per-Manager.PNG)
