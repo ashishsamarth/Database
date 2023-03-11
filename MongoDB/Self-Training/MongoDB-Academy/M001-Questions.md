@@ -7,21 +7,20 @@ Check all answers that apply
     A. Because it uses a structured way to store and access data
     B. Because it does not utilizie tables, rows and columns to organize data
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------
-Answer: Both
+    Answer: Both
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is a Document?
 In MongoDB how does a document relate to a collection?
--------------------------------------------------------------------------------------------------------------------------------------------------------------
-  A. Collections are tables of documents and other collecitons.
-  B. Collections consist of one or many documents.
-  C. Documents are made up of collections.
-  D. Collections are documents that are organized in rows and columns.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
-Answer: B
-Note: A way to organize and store data as a set of field-value pairs
+    A. Collections are tables of documents and other collecitons.
+    B. Collections consist of one or many documents.
+    C. Documents are made up of collections.
+    D. Collections are documents that are organized in rows and columns.
+
+    Answer: B
+    Note: A way to organize and store data as a set of field-value pairs
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is a Collection?
