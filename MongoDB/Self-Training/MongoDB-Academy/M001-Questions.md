@@ -2,9 +2,10 @@
 Why is MongoDB a NoSQL Database?
 Check all answers that apply
 
-A. Because it uses a structured way to store and access data
-B. Because it does not utilizie tables, rows and columns to organize data
+  A. Because it uses a structured way to store and access data
+  B. Because it does not utilizie tables, rows and columns to organize data
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 Answer: Both
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 What is a Document?
