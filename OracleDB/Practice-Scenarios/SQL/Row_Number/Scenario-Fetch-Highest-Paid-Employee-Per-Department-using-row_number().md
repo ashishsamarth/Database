@@ -28,4 +28,4 @@ Scenario: Fetch-Highest-Paid-Employee-Per-Department-using-row_number()
 
 --------------------------------------------------------------------------------
 
-![!](../../../Assets/Oracle/Scenario-Fetch-Highest-Paid-Employee-Per-Department-using-row_number().PNG)
+![!](../../../../Assets/Oracle/Scenario-Fetch-Highest-Paid-Employee-Per-Department-using-row_number().PNG)
