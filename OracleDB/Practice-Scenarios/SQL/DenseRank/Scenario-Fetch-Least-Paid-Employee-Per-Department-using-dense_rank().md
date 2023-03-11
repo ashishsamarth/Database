@@ -33,4 +33,4 @@ Scenario-Fetch-Least-Paid-Employee-Per-Department-using-dense_rank()
 
 --------------------------------------------------------------------------------
 
-![!](../../../Assets/Oracle/Scenario-Fetch-Least-Paid-Employee-Per-Department-using-dense_rank().PNG)
+![!](../../../../Assets/Oracle/Scenario-Fetch-Least-Paid-Employee-Per-Department-using-dense_rank().PNG)
