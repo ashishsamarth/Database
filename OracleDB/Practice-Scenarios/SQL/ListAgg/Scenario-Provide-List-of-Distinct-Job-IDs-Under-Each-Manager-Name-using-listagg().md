@@ -29,4 +29,4 @@ Provide: A list of Employee Job ids (distinct) under Each Manager Name
 
 --------------------------------------------------------------------------------
 
-![!](../../../Assets/Oracle/Scenario-Provide-List-of-Distinct-Job-IDs-Under-Each-Manager-Name-using-listagg().PNG)
+![!](../../../../Assets/Oracle/Scenario-Provide-List-of-Distinct-Job-IDs-Under-Each-Manager-Name-using-listagg().PNG)
