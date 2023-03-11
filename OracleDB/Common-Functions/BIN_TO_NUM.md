@@ -10,8 +10,8 @@ Example:
 --------------------------------------------------------------------------------
 
 Select bin_to_num(1) as INT_REP_OF_BINARY from dual;
-
 --------------------------------------------------------------------------------
+
 This function will return the integer representation of the binary
     
     INT_REP_OF_BINARY
@@ -19,8 +19,8 @@ This function will return the integer representation of the binary
 
 --------------------------------------------------------------------------------
 Select bin_to_num(1,0) as INT_REP_OF_BINARY from dual;
-
 --------------------------------------------------------------------------------
+
 This function will return the integer representation of the binary
     
     INT_REP_OF_BINARY
@@ -36,8 +36,8 @@ This function will return the integer representation of the binary
 
 --------------------------------------------------------------------------------
 Select bin_to_num(1,1,1,1) as INT_REP_OF_BINARY from dual;
-
 --------------------------------------------------------------------------------
+
 This function will return the integer representation of the binary
     
     INT_REP_OF_BINARY
