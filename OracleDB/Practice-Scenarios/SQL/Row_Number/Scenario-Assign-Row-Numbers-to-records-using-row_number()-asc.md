@@ -18,4 +18,4 @@ Scenario-Assign-Row-Numbers-to-records-using-row_number()-asc
 
 --------------------------------------------------------------------------------
 
-![!](../../../Assets/Oracle/Scenario-Assign-Row-Numbers-to-records-using-row_number()-asc.PNG)
+![!](../../../../Assets/Oracle/Scenario-Assign-Row-Numbers-to-records-using-row_number()-asc.PNG)
