@@ -1,5 +1,5 @@
-
-    Select Bottom N Rows from a Dataset - using CTE (Common Table Expressions)
+--------------------------------------------------------------------------------
+Select Bottom N Rows from a Dataset - using CTE (Common Table Expressions)
 --------------------------------------------------------------------------------
     WITH top_n_rows AS (
         SELECT
