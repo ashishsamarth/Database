@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------
-    Provide a List of First-Name for all employees in a particular department
+Provide a List of First-Name for all employees in a particular department
 --------------------------------------------------------------------------------
     SELECT
         department_id,
