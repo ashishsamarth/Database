@@ -1,4 +1,5 @@
-    Select TOP N Rows from a Dataset - using CTE (Common Table Expressions)
+--------------------------------------------------------------------------------
+Select TOP N Rows from a Dataset - using CTE (Common Table Expressions)
 --------------------------------------------------------------------------------
     WITH top_n_rows AS (
         SELECT
