@@ -17,4 +17,4 @@ Scenario: Get The Employee-Id and Corresponding Manager-Name for each employee, 
         b.first_name NULLS FIRST
 
 --------------------------------------------------------------------------------
-![!](../../../Assets/Oracle/Scenario-Left-Outer-Join.PNG)
+![!](../../../../Assets/Oracle/Scenario-Left-Outer-Join.PNG)
