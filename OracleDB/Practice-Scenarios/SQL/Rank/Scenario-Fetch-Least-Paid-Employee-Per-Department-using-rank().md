@@ -32,4 +32,4 @@ Scenario-Fetch-Least-Paid-Employee-Per-Department-using-rank()
 
 --------------------------------------------------------------------------------
 
-![!](../../../Assets/Oracle/Scenario-Fetch-Least-Paid-Employee-Per-Department-using-rank().PNG)
+![!](../../../../Assets/Oracle/Scenario-Fetch-Least-Paid-Employee-Per-Department-using-rank().PNG)
