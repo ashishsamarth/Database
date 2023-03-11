@@ -28,4 +28,4 @@ Scenario: Fetch 5th highest salary from Employee Table
 
 --------------------------------------------------------------------------------
 
-![!](../../../Assets/Oracle/Scenario-Fetch-5th-Highest-Salary-From-Dataset.PNG)
+![!](../../../../Assets/Oracle/Scenario-Fetch-5th-Highest-Salary-From-Dataset.PNG)
