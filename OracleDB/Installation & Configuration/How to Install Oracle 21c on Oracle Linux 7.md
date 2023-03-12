@@ -227,9 +227,9 @@ c.  To create a database in silent mode
 15. Once Step#13 is completed, perform the following
 
 As a 'oracle' user, edit the following file and change the entry from 'N' to 'Y'
-
-In /etc/oratab
 --------------------------------------------------------------------------------
+In /etc/oratab
+
     orclcdb21c:/u01/app/oracle/product/db/21.0.0/dbhome:Y
 
 --------------------------------------------------------------------------------
@@ -269,6 +269,6 @@ e.  If the PDB is open, the following statement will throw an error, if its clos
 f.  Save the opened state of PDB
     
     ALTER PLUGGABLE DATABASE orclpdb21c SAVE STATE;
-        COMMIT;
+    COMMIT;
 
 --------------------------------------------------------------------------------
