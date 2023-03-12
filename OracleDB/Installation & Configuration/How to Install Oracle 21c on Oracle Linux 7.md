@@ -26,17 +26,19 @@ Oracle 21C Installation
 --------------------------------------------------------------------------------
 4.  You may want pull and install the os updates and security fixes, but its not mandatory. If you want to update it
     As a 'root' user, execute the following
-
+--------------------------------------------------------------------------------
     yum update -y
 
+--------------------------------------------------------------------------------
 5.  Once the preinstall is completed, go ahead and set up a password for the 'oracle' user (This was created as a part of preinstall)
     As a 'root' user, execute the following
-
+--------------------------------------------------------------------------------
     passwd oracle
 
+--------------------------------------------------------------------------------
 6.  With default install of Oracle Linux, the 'secure linux' parameter is set to 'enforcing', we need to modify it to 'permissive' as a part of db installation
     As a 'root' user, edit the following file
-
+--------------------------------------------------------------------------------
     /etc/selinux/config
 
     comment the line: SELINUX=enforcing
@@ -47,17 +49,19 @@ Oracle 21C Installation
 
     setenforce Permissive
 
+--------------------------------------------------------------------------------
 7.  Create the following directory structures
     As a 'root' user, execute the following
-
+--------------------------------------------------------------------------------
     mkdir -p /u01/app/oracle/product/db/21.0.0/dbhome
     mkdir -p /u02/oradata
     chown -R oracle:oinstall /u01 /u02
     chmod -R 775 /u01 /u02
 
+--------------------------------------------------------------------------------
 8.  We have to define some specific variables for oracle user, so
     As a 'oracle' user, perform the following
-
+--------------------------------------------------------------------------------
     a.  mkdir /home/oracle/scripts
     b.  cd scripts
     c.  vi set_env.sh   {Add the following lines}
@@ -88,6 +92,7 @@ Oracle 21C Installation
     # Envt Variable Settings
     . /home/oracle/scripts/set_env.sh
 
+--------------------------------------------------------------------------------
 9.  For the oracle user to be able to startup and shutdown the service,
     As a 'oracle' user, create following files, one for db start up and other for db shutdown
 
