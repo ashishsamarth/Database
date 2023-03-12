@@ -184,48 +184,47 @@ Assign execute permissions to the startup and shutdown scripts
 14. The product is installed, now its time to create a database.
     As a 'oracle' user, execute the following
 
-    a.  This step is only applicable if you wish to change the default port
-        Run the following command, to update the port & host for listener and service name Configurations
+a.  This step is only applicable if you wish to change the default port
+    Run the following command, to update the port & host for listener and service name Configurations
 
 --------------------------------------------------------------------------------
-        netmgr
-        
---------------------------------------------------------------------------------
-        # Once the listener and service name configurations are update and saved, when the following commands are executed, it will 
-        # take reference from listener.ora and tnsnames.ora under $TNS_ADMIN
+    netmgr
 
-    b.  To start the listener
+    # Once the listener and service name configurations are update and saved, when the following commands are executed, it will 
+    # take reference from listener.ora and tnsnames.ora under $TNS_ADMIN
+
 --------------------------------------------------------------------------------
-        lsnrctl start
+b.  To start the listener
+--------------------------------------------------------------------------------
+    lsnrctl start
 
 --------------------------------------------------------------------------------
     c.  To create a database in silent mode
 --------------------------------------------------------------------------------
 
-        dbca -silent -createDatabase                                              \
-        -templateName General_Purpose.dbc                                         \
-        -gdbname ${ORACLE_SID} -sid  ${ORACLE_SID} -responseFile NO_VALUE         \
-        -characterSet AL32UTF8                                                    \
-        -sysPassword Black0psLocalDBoracle#                                       \
-        -systemPassword Black0psLocalDBoracle#                                    \
-        -createAsContainerDatabase true                                           \
-        -numberOfPDBs 1                                                           \
-        -pdbName ${PDB_NAME}                                                      \
-        -pdbAdminPassword Black0psLocalDBoracle#                                  \
-        -databaseType MULTIPURPOSE                                                \
-        -memoryMgmtType auto_sga                                                  \
-        -totalMemory 2000                                                         \
-        -storageType FS                                                           \
-        -datafileDestination "${DATA_DIR}"                                        \
-        -redoLogFileSize 50                                                       \
-        -emConfiguration NONE                                                     \
-        -ignorePreReqs
+    dbca -silent -createDatabase                                              \
+    -templateName General_Purpose.dbc                                         \
+    -gdbname ${ORACLE_SID} -sid  ${ORACLE_SID} -responseFile NO_VALUE         \
+    -characterSet AL32UTF8                                                    \
+    -sysPassword Black0psLocalDBoracle#                                       \
+    -systemPassword Black0psLocalDBoracle#                                    \
+    -createAsContainerDatabase true                                           \
+    -numberOfPDBs 1                                                           \
+    -pdbName ${PDB_NAME}                                                      \
+    -pdbAdminPassword Black0psLocalDBoracle#                                  \
+    -databaseType MULTIPURPOSE                                                \
+    -memoryMgmtType auto_sga                                                  \
+    -totalMemory 2000                                                         \
+    -storageType FS                                                           \
+    -datafileDestination "${DATA_DIR}"                                        \
+    -redoLogFileSize 50                                                       \
+    -emConfiguration NONE                                                     \
+    -ignorePreReqs
 
 --------------------------------------------------------------------------------
 15. Once Step#13 is completed, perform the following
     As a 'oracle' user, edit the following file and change the entry from 'N' to 'Y'
 
---------------------------------------------------------------------------------
     In /etc/oratab
 --------------------------------------------------------------------------------
     orclcdb21c:/u01/app/oracle/product/db/21.0.0/dbhome:Y
@@ -235,37 +234,37 @@ Assign execute permissions to the startup and shutdown scripts
     since the default status of the PDB is closed
     So we will open the database and save its state. This will ensure that the PDB is opened automatically after ever DB restart
 
-    a.  Login to DB as a sys user   (Defined-As as a part of Database Creation)
+a.  Login to DB as a sys user   (Defined-As as a part of Database Creation)
 --------------------------------------------------------------------------------
 
-            sqlplus / as sysdba
+    sqlplus / as sysdba
 
 --------------------------------------------------------------------------------
-    b.  Check if you are connected to CDB or PDB
+b.  Check if you are connected to CDB or PDB
 --------------------------------------------------------------------------------
-            show con_name;
-            alter system set db_create_file_dest='${DATA_DIR}';
+    show con_name;
+    alter system set db_create_file_dest='${DATA_DIR}';
 
 --------------------------------------------------------------------------------    
-    c.  If you are connected to CDB, then change the session to PDB
+c.  If you are connected to CDB, then change the session to PDB
 --------------------------------------------------------------------------------    
-            alter session set container=orclpdb21c;
+    alter session set container=orclpdb21c;
 
 --------------------------------------------------------------------------------    
-    d.  Once the above statement is executed successfully, check if you are connected to PDB now.
+d.  Once the above statement is executed successfully, check if you are connected to PDB now.
 --------------------------------------------------------------------------------    
-            show con_name;
+    show con_name;
 
 --------------------------------------------------------------------------------    
-    e.  If the PDB is open, the following statement will throw an error, if its closed, then the statement will open the PDB
+e.  If the PDB is open, the following statement will throw an error, if its closed, then the statement will open the PDB
 --------------------------------------------------------------------------------    
-            ALTER PLUGGABLE DATABASE orclpdb21c OPEN;
-            COMMIT;
+    ALTER PLUGGABLE DATABASE orclpdb21c OPEN;
+    COMMIT;
 
 --------------------------------------------------------------------------------
-    f.  Save the opened state of PDB
+f.  Save the opened state of PDB
 --------------------------------------------------------------------------------    
-            ALTER PLUGGABLE DATABASE orclpdb21c SAVE STATE;
-            COMMIT;
+    ALTER PLUGGABLE DATABASE orclpdb21c SAVE STATE;
+        COMMIT;
 
 --------------------------------------------------------------------------------
