@@ -97,7 +97,7 @@ Oracle 21C Installation
     As a 'oracle' user, create following files, one for db start up and other for db shutdown
 
 ---------------------------------------------------
-# Contents of start_db.sh
+Contents of start_db.sh
 
 --------------------------------------------------------------------------------
     #!/bin/bash
@@ -110,7 +110,7 @@ Oracle 21C Installation
     dbstart $ORACLE_HOME
 
 ---------------------------------------------------
-# Contents of stop_db.sh
+Contents of stop_db.sh
 
 --------------------------------------------------------------------------------
     #!/bin/bash
