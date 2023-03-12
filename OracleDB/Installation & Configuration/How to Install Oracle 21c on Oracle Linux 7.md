@@ -208,12 +208,12 @@ c.  To create a database in silent mode
     -templateName General_Purpose.dbc                                         \
     -gdbname ${ORACLE_SID} -sid  ${ORACLE_SID} -responseFile NO_VALUE         \
     -characterSet AL32UTF8                                                    \
-    -sysPassword Black0psLocalDBoracle#                                       \
-    -systemPassword Black0psLocalDBoracle#                                    \
+    -sysPassword YourPasswordGoesHere                                         \
+    -systemPassword YourPasswordGoesHere                                      \
     -createAsContainerDatabase true                                           \
     -numberOfPDBs 1                                                           \
     -pdbName ${PDB_NAME}                                                      \
-    -pdbAdminPassword Black0psLocalDBoracle#                                  \
+    -pdbAdminPassword YourPasswordGoesHere                                    \
     -databaseType MULTIPURPOSE                                                \
     -memoryMgmtType auto_sga                                                  \
     -totalMemory 2000                                                         \
