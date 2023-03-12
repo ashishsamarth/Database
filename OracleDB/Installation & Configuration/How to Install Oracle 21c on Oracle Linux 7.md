@@ -132,21 +132,26 @@ Assign execute permissions to the startup and shutdown scripts
 10. For the newly added oracle 19c variables to take effect, source the .bash_profile
     As a 'oracle' user, execute the following
 
+--------------------------------------------------------------------------------
     source ~/.bash_profile
 
+--------------------------------------------------------------------------------
 11. Unzip the LINUX version of DB installation in to oracle home
     Assumption: You have the 'LINUX.X64_213000_db_home.zip' downloaded and uploaded to /tmp of your target server, and the owner of this file is 'oracle' user
 
     As a 'oracle' user, unzip the zipped file inside $ORACLE_HOME
 
+--------------------------------------------------------------------------------
     cd $ORACLE_HOME
     unzip -oq /tmp/LINUX.X64_213000_db_home.zip
 
+--------------------------------------------------------------------------------
 12. Once the file is unzipped in $ORACLE_HOME successfully, run the 'installer in silent mode'
     Running in silent mode, allows you to feed variables / values as a part of command execution, rather than provided them as a part of db installation progress
 
     As a 'oracle' user inside $ORACLE_HOME, execute the following
 
+--------------------------------------------------------------------------------
     ./runInstaller -ignorePrereq -waitforcompletion -silent                    \
     -responseFile ${ORACLE_HOME}/install/response/db_install.rsp               \
     oracle.install.option=INSTALL_DB_SWONLY                                    \
@@ -165,13 +170,17 @@ Assign execute permissions to the startup and shutdown scripts
     SECURITY_UPDATES_VIA_MYORACLESUPPORT=false                                 \
     DECLINE_SECURITY_UPDATES=true
 
+--------------------------------------------------------------------------------
 13. Installation of DB has few scripts that needs to be executed as 'root' user.
     Open a new terminal and login as 'root' user.
 
     Once step#11 is completed, execute the following
+--------------------------------------------------------------------------------
+
     . /u01/app/oraInventory/orainstRoot.sh
     . /u01/app/oracle/product/db/21.0.0/dbhome/root.sh
 
+--------------------------------------------------------------------------------
 14. The product is installed, now its time to create a database.
     As a 'oracle' user, execute the following
 
@@ -183,9 +192,13 @@ Assign execute permissions to the startup and shutdown scripts
         # take reference from listener.ora and tnsnames.ora under $TNS_ADMIN
 
     b.  To start the listener
+--------------------------------------------------------------------------------
+
         lsnrctl start
-    
+
+--------------------------------------------------------------------------------
     c.  To create a database in silent mode
+--------------------------------------------------------------------------------
 
         dbca -silent -createDatabase                                              \
         -templateName General_Purpose.dbc                                         \
@@ -206,33 +219,43 @@ Assign execute permissions to the startup and shutdown scripts
         -emConfiguration NONE                                                     \
         -ignorePreReqs
 
+--------------------------------------------------------------------------------
 15. Once Step#13 is completed, perform the following
     As a 'oracle' user, edit the following file and change the entry from 'N' to 'Y'
 
+--------------------------------------------------------------------------------
     In /etc/oratab
     orclcdb21c:/u01/app/oracle/product/db/21.0.0/dbhome:Y
 
+--------------------------------------------------------------------------------
 16. Oracle 21c Database has been installed successfully on Oracle Linux 7. One last step is to open the PDB (pluggable database, that we created), 
     since the default status of the PDB is closed
     So we will open the database and save its state. This will ensure that the PDB is opened automatically after ever DB restart
 
     a.  Login to DB as a sys user   (Defined-As as a part of Database Creation)
+--------------------------------------------------------------------------------
+
             sqlplus / as sysdba
     
     b.  Check if you are connected to CDB or PDB
+--------------------------------------------------------------------------------
             show con_name;
             alter system set db_create_file_dest='${DATA_DIR}';
     
     c.  If you are connected to CDB, then change the session to PDB
+--------------------------------------------------------------------------------    
             alter session set container=orclpdb21c;
     
     d.  Once the above statement is executed successfully, check if you are connected to PDB now.
+--------------------------------------------------------------------------------    
             show con_name;
     
     e.  If the PDB is open, the following statement will throw an error, if its closed, then the statement will open the PDB
+--------------------------------------------------------------------------------    
             ALTER PLUGGABLE DATABASE orclpdb21c OPEN;
             COMMIT;
 
     f.  Save the opened state of PDB
+--------------------------------------------------------------------------------    
             ALTER PLUGGABLE DATABASE orclpdb21c SAVE STATE;
             COMMIT;
