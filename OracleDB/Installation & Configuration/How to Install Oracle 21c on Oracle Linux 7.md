@@ -226,7 +226,9 @@ c.  To create a database in silent mode
 --------------------------------------------------------------------------------
 15. Once Step#13 is completed, perform the following
 
+--------------------------------------------------------------------------------
 As a 'oracle' user, edit the following file and change the entry from 'N' to 'Y'
+
 --------------------------------------------------------------------------------
 In /etc/oratab
 
