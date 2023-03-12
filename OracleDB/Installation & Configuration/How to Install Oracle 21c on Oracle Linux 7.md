@@ -186,14 +186,16 @@ Assign execute permissions to the startup and shutdown scripts
 
     a.  This step is only applicable if you wish to change the default port
         Run the following command, to update the port & host for listener and service name Configurations
-        netmgr
 
+--------------------------------------------------------------------------------
+        netmgr
+        
+--------------------------------------------------------------------------------
         # Once the listener and service name configurations are update and saved, when the following commands are executed, it will 
         # take reference from listener.ora and tnsnames.ora under $TNS_ADMIN
 
     b.  To start the listener
 --------------------------------------------------------------------------------
-
         lsnrctl start
 
 --------------------------------------------------------------------------------
@@ -225,6 +227,7 @@ Assign execute permissions to the startup and shutdown scripts
 
 --------------------------------------------------------------------------------
     In /etc/oratab
+--------------------------------------------------------------------------------
     orclcdb21c:/u01/app/oracle/product/db/21.0.0/dbhome:Y
 
 --------------------------------------------------------------------------------
@@ -236,26 +239,33 @@ Assign execute permissions to the startup and shutdown scripts
 --------------------------------------------------------------------------------
 
             sqlplus / as sysdba
-    
+
+--------------------------------------------------------------------------------
     b.  Check if you are connected to CDB or PDB
 --------------------------------------------------------------------------------
             show con_name;
             alter system set db_create_file_dest='${DATA_DIR}';
-    
+
+--------------------------------------------------------------------------------    
     c.  If you are connected to CDB, then change the session to PDB
 --------------------------------------------------------------------------------    
             alter session set container=orclpdb21c;
-    
+
+--------------------------------------------------------------------------------    
     d.  Once the above statement is executed successfully, check if you are connected to PDB now.
 --------------------------------------------------------------------------------    
             show con_name;
-    
+
+--------------------------------------------------------------------------------    
     e.  If the PDB is open, the following statement will throw an error, if its closed, then the statement will open the PDB
 --------------------------------------------------------------------------------    
             ALTER PLUGGABLE DATABASE orclpdb21c OPEN;
             COMMIT;
 
+--------------------------------------------------------------------------------
     f.  Save the opened state of PDB
 --------------------------------------------------------------------------------    
             ALTER PLUGGABLE DATABASE orclpdb21c SAVE STATE;
             COMMIT;
+
+--------------------------------------------------------------------------------
