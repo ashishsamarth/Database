@@ -1,4 +1,9 @@
+--------------------------------------------------------------------------------
+Oracle 21C Installation
+--------------------------------------------------------------------------------
+
 1.  The machine must have a fully qualified name for the server.
+--------------------------------------------------------------------------------
     As a 'root' user
     check the /etc/hosts file and add the following line
 
@@ -9,13 +14,16 @@
 
     Note: The letter case (upper or lower) of hostname must be consistent across the board
 
+--------------------------------------------------------------------------------
 2.  The hostname in /etc/hostname must be same as the hostname defined in /etc/hosts. This can be managed as a part of oracle linux installation itself.
+--------------------------------------------------------------------------------
 
 3.  The advantage of using oracle 7 over fedora or Centos is, their is a oracle db preinstall package available for oracle linux with 'yum'
     As a 'root' user, execute the following
-
+--------------------------------------------------------------------------------
     yum install -y oracle-database-preinstall-21c
 
+--------------------------------------------------------------------------------
 4.  You may want pull and install the os updates and security fixes, but its not mandatory. If you want to update it
     As a 'root' user, execute the following
 
