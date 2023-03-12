@@ -96,8 +96,10 @@ Oracle 21C Installation
 9.  For the oracle user to be able to startup and shutdown the service,
     As a 'oracle' user, create following files, one for db start up and other for db shutdown
 
-    ---------------------------------------------------
-    # Contents of start_db.sh
+---------------------------------------------------
+# Contents of start_db.sh
+
+--------------------------------------------------------------------------------
     #!/bin/bash
     . /home/oracle/scripts/set_env.sh
 
@@ -107,8 +109,10 @@ Oracle 21C Installation
 
     dbstart $ORACLE_HOME
 
-    ---------------------------------------------------
-    # Contents of stop_db.sh
+---------------------------------------------------
+# Contents of stop_db.sh
+
+--------------------------------------------------------------------------------
     #!/bin/bash
     . /home/oracle/scripts/set_env.sh
 
@@ -118,10 +122,13 @@ Oracle 21C Installation
 
     dbshut $ORACLE_HOME    
 
-    ---------------------------------------------------
-    Assign execute permissions to the startup and shutdown scripts
+--------------------------------------------------------------------------------
+Assign execute permissions to the startup and shutdown scripts
+
+--------------------------------------------------------------------------------
     chmod 700 start_db.sh stop_db.sh
 
+--------------------------------------------------------------------------------
 10. For the newly added oracle 19c variables to take effect, source the .bash_profile
     As a 'oracle' user, execute the following
 
