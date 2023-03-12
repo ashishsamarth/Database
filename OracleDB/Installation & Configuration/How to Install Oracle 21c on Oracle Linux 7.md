@@ -195,11 +195,13 @@ a.  This step is only applicable if you wish to change the default port
 
 --------------------------------------------------------------------------------
 b.  To start the listener
+
 --------------------------------------------------------------------------------
     lsnrctl start
 
 --------------------------------------------------------------------------------
-    c.  To create a database in silent mode
+c.  To create a database in silent mode
+
 --------------------------------------------------------------------------------
 
     dbca -silent -createDatabase                                              \
@@ -223,47 +225,49 @@ b.  To start the listener
 
 --------------------------------------------------------------------------------
 15. Once Step#13 is completed, perform the following
-    As a 'oracle' user, edit the following file and change the entry from 'N' to 'Y'
 
-    In /etc/oratab
+As a 'oracle' user, edit the following file and change the entry from 'N' to 'Y'
+
+In /etc/oratab
 --------------------------------------------------------------------------------
     orclcdb21c:/u01/app/oracle/product/db/21.0.0/dbhome:Y
 
 --------------------------------------------------------------------------------
 16. Oracle 21c Database has been installed successfully on Oracle Linux 7. One last step is to open the PDB (pluggable database, that we created), 
     since the default status of the PDB is closed
+    
     So we will open the database and save its state. This will ensure that the PDB is opened automatically after ever DB restart
 
-a.  Login to DB as a sys user   (Defined-As as a part of Database Creation)
 --------------------------------------------------------------------------------
+a.  Login to DB as a sys user   (Defined-As as a part of Database Creation)
 
     sqlplus / as sysdba
 
 --------------------------------------------------------------------------------
 b.  Check if you are connected to CDB or PDB
---------------------------------------------------------------------------------
+
     show con_name;
     alter system set db_create_file_dest='${DATA_DIR}';
 
 --------------------------------------------------------------------------------    
 c.  If you are connected to CDB, then change the session to PDB
---------------------------------------------------------------------------------    
+    
     alter session set container=orclpdb21c;
 
 --------------------------------------------------------------------------------    
 d.  Once the above statement is executed successfully, check if you are connected to PDB now.
---------------------------------------------------------------------------------    
+    
     show con_name;
 
 --------------------------------------------------------------------------------    
 e.  If the PDB is open, the following statement will throw an error, if its closed, then the statement will open the PDB
---------------------------------------------------------------------------------    
+    
     ALTER PLUGGABLE DATABASE orclpdb21c OPEN;
     COMMIT;
 
 --------------------------------------------------------------------------------
 f.  Save the opened state of PDB
---------------------------------------------------------------------------------    
+    
     ALTER PLUGGABLE DATABASE orclpdb21c SAVE STATE;
         COMMIT;
 
