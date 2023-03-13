@@ -1,0 +1,1 @@
+@reboot bash /root/root-scripts/update_hosts_with_ip_address.sh
