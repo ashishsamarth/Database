@@ -1,5 +1,8 @@
 #!/bin/sh
 # chkconfig: 345 99 10
+# 345-means that the service will be started in init levels 3 and 5 and will be stopped in other levels.
+# 99-means that the service will be started at the near end of the init level processing
+# 10-means that the service will be stopped at the near beginning of the init level processing
 # description: Oracle auto start-stop script.
 #
 # Set ORA_OWNER to the user id of the owner of the
