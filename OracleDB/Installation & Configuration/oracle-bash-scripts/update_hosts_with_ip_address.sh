@@ -11,4 +11,4 @@ sed -i '/'$vb_hostname_with_domain'$/ d' /etc/hosts
 vp_ip=$(/sbin/ifconfig | grep 'inet'| grep -v '127.0.0.1' | cut -d: -f2 | awk '{ print $2}')
 
 #add current ip address and hostname to hosts file
-echo "$vp_ip $ vb_hostname $vb_hostname_with_domain" >>/etc/hosts
+echo "$vp_ip $vb_hostname $vb_hostname_with_domain" >>/etc/hosts
