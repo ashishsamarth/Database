@@ -107,6 +107,7 @@ Oracle 11GR2 Installation
 
 --------------------------------------------------------------------------------
 12.	The installer will generate errors at the following places for linking errors
+
 	a.	ins_ctx.mk
 	
 	fix for the above error is:
