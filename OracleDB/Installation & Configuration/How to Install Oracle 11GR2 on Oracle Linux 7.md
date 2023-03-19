@@ -110,12 +110,12 @@ Oracle 11GR2 Installation
 	a.	ins_ctx.mk
 	
 	fix for the above error is:
+
 		1.	Go to $ORACLE_HOME/ctx/lib/
 		2.	vi ins_ctx.mk
 		3. 	Look for the text in the file (it will appear only once)
 			ctxhx: $(CTXHXOBJ)
 			$(LINK_CTXHX) $(CTXHXOBJ) $(INSO_LINK)
-			
 		4.	Modify the '$(LINK_CTXHX) $(CTXHXOBJ) $(INSO_LINK)' to the following
 			-static $(LINK_CTXHX) $(CTXHXOBJ) $(INSO_LINK) /usr/lib/gcc/x86_64-redhat-linux/4.8.2/libstdc++.so
 		5.	Save the file
@@ -123,11 +123,11 @@ Oracle 11GR2 Installation
 	
 	
 	b.	ins_emagent.mk
+
 		1.	Go to $ORACLE_HOME/sysman/lib/
 		2.	vi ins_emagent.mk
 		3.	Look for the text in the file (it will appear only once)
 			$(MK_EMAGENT_NMECTL)
-			
 		4.	Modify the '$(MK_EMAGENT_NMECTL)' to
 			$(MK_EMAGENT_NMECTL) -lnnz11 
 		5.	Save the file
