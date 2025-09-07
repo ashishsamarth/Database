@@ -249,7 +249,7 @@ a.  Login to DB as a sys user   (Defined-As as a part of Database Creation)
 b.  Check if you are connected to CDB or PDB
 
     show con_name;
-    alter system set db_create_file_dest='${DATA_DIR}';
+    alter system set db_create_file_dest='/u02/oradata';
 
 --------------------------------------------------------------------------------    
 c.  If you are connected to CDB, then change the session to PDB
@@ -272,5 +272,6 @@ f.  Save the opened state of PDB
     
     ALTER PLUGGABLE DATABASE orclpdb21c SAVE STATE;
     COMMIT;
+
 
 --------------------------------------------------------------------------------
