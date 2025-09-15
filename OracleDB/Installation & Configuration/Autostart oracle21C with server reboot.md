@@ -14,14 +14,23 @@ As a root user
     Type=forking
     User=oracle
     Group=oinstall
-    ExecStart=/u01/app/oracle/product/db/21.3.0/dbhome/bin/dbstart /u01/app/oracle/product/db/21.3.0/dbhome
-    ExecStop=/u01/app/oracle/product/db/21.3.0/dbhome/bin/dbshut /u01/app/oracle/product/db/21.3.0/dbhome
+    Environment="ORACLE_UNQNAME=mdscdb21c"
+    Environment="ORACLE_BASE=/u01/app/oracle"
+    Environment="ORACLE_HOME=/u01/app/oracle/product/db/21.0.0/dbhome"
+    Environment="ORA_INVENTORY=/u01/app/oraInventory"
+    Environment="ORACLE_SID=mdscdb21c"
+    Environment="PDB_NAME=mdspdb21c"
+    Environment="DATA_DIR=/u02/oradata"
+    Environment="TNS_ADMIN=/u01/app/oracle/network/admin"
+    ExecStart=/home/oracle/scripts/start_db.sh
+    ExecStop=/home/oracle/scripts/stop_db.sh
     Restart=on-failure
     LimitNOFILE=65536
     LimitNPROC=16384
     
     [Install]
     WantedBy=multi-user.target
+
 
 --------------------------------------------------------------------------------
 2. Once the file is saved: Reload the daemon
